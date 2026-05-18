@@ -19,6 +19,13 @@ const description = IS_BETA
   ? "Beta preview of upcoming Slay the Spire 2 (sts2) content. Browse new cards, relics, characters, monsters, potions, events, powers, and more."
   : "The complete Slay the Spire 2 (sts2) database. Browse all cards, relics, characters, monsters, potions, events, powers, and more. Filter by character, rarity, and type.";
 
+// Build-time renders ran with the backend unreachable (CI Docker
+// build network), which cached `null` for stats — the homepage then
+// served a stat-less grid forever via ISR. Forcing dynamic means
+// every visit re-renders against the live backend, so the section
+// counts and leaderboard numbers are always current.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title,
   description,
