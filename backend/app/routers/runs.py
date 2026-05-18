@@ -49,8 +49,19 @@ def _load_run_blob(run_hash: str) -> str | None:
 
 
 @router.post("", tags=["Runs"])
+@limiter.limit("600/hour")
 async def submit_run_endpoint(request: Request, username: str | None = None):
-    """Submit a run for community stats. Paste the .run file JSON content. Optional ?username= param."""
+    """Submit a run for community stats. Paste the .run file JSON content. Optional ?username= param.
+
+    Rate limit: 600/hour (~10/min sustained, but allows bursts). Sized
+    for the Overwolf-launch scenario where a desktop-app user has a
+    backlog of hundreds of saved runs and wants to upload them all
+    after first install. The previous default of 60/min would have
+    forced a power user with 200 runs to wait ~4 minutes mid-upload.
+    Duplicate detection via run_hash UNIQUE constraint short-circuits
+    re-submission attempts, so the practical write load is bounded by
+    actual distinct runs per uploader.
+    """
     if os.environ.get("DISABLE_RUN_SUBMISSIONS"):
         run_errors.labels(reason="disabled").inc()
         raise HTTPException(
