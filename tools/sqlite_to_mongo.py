@@ -60,33 +60,44 @@ except ImportError:
 BATCH_SIZE = 500
 
 
-def fetch_child_rows(cur: sqlite3.Cursor, table: str) -> dict[str, list[dict[str, Any]]]:
-    """Read an entire child table into {run_hash: [rows]}."""
+def fetch_child_rows(cur: sqlite3.Cursor, table: str) -> dict[int, list[dict[str, Any]]]:
+    """Read an entire child table into {run_id: [rows]}.
+
+    Child tables FK to runs.id (the integer PK), not runs.run_hash.
+    The caller maps run_id → run_hash via the runs table read.
+    """
     cur.execute(f"SELECT * FROM {table}")
     cols = [c[0] for c in cur.description]
-    out: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    out: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in cur.fetchall():
         d = dict(zip(cols, row, strict=False))
-        run_hash = d.pop("run_hash")
-        out[run_hash].append(d)
+        run_id = d.pop("run_id", None)
+        if run_id is None:
+            # Some legacy tables may use run_hash directly — fall back
+            run_id = d.pop("run_hash", None)
+        if run_id is not None:
+            out[run_id].append(d)
     return out
 
 
-def build_doc(run_row: dict[str, Any], children: dict[str, dict[str, list]]) -> dict[str, Any]:
-    """Compose one Mongo document from a runs row + child rows."""
+def build_doc(run_row: dict[str, Any], children: dict[str, dict]) -> dict[str, Any]:
+    """Compose one Mongo document from a runs row + child rows keyed by id."""
     rh = run_row["run_hash"]
+    rid = run_row["id"]
     doc = {
         "_id": rh,
-        **{k: v for k, v in run_row.items() if k != "run_hash"},
+        **{k: v for k, v in run_row.items() if k not in ("run_hash", "id")},
     }
-    # Pull child arrays. Field names match the runs_db schema.
-    doc["deck"] = children["run_cards"].get(rh, [])
-    doc["relics"] = children["run_relics"].get(rh, [])
-    doc["potions"] = children["run_potions"].get(rh, [])
-    doc["encounters"] = children["run_encounters"].get(rh, [])
-    # Map data may not exist in older schemas — handle gracefully.
+    # Pull child arrays keyed by the integer run_id.
+    doc["deck"] = children.get("run_cards", {}).get(rid, [])
+    doc["relics"] = children.get("run_relics", {}).get(rid, [])
+    doc["potions"] = children.get("run_potions", {}).get(rid, [])
+    doc["card_choices"] = children.get("run_card_choices", {}).get(rid, [])
+    # Optional tables that may exist depending on schema version
+    if "run_encounters" in children:
+        doc["encounters"] = children["run_encounters"].get(rid, [])
     if "run_map" in children:
-        doc["map"] = children["run_map"].get(rh, [])
+        doc["map"] = children["run_map"].get(rid, [])
     return doc
 
 
