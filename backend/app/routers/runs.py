@@ -477,14 +477,77 @@ def get_entity_scores(request: Request, entity_type: str):
     return get_all_entity_scores(entity_type)
 
 
-# In-process TTL cache for /stats. Aggregations are expensive (full
-# scan + GROUP BY on the runs table — was ~2.5s against Turso pre-cache)
-# and the data only changes when a new run is submitted, so a short
-# TTL collapses bursts of identical reads into a single round-trip.
-# Per-filter-combo keying so a logged-in user filtering by their own
-# username still gets a personal cache slot.
-_STATS_CACHE_TTL_SECONDS = 60
+# In-process cache for /stats — populated proactively by a background
+# refresher (start_stats_refresher below), not just by user requests.
+# Goal: users never wait on the DB for the common filter combos.
+# Filtered combos not on the hot list still fall through to a sync
+# read on miss; we extend _HOT_FILTER_COMBOS as new common queries
+# emerge.
+_STATS_CACHE_TTL_SECONDS = (
+    600  # 10min, generous so a refresher hiccup isn't user-visible
+)
 _stats_cache: dict[tuple, tuple[float, dict]] = {}
+
+# Hot filter combos to keep pre-warmed. Keys match the cache_key tuple
+# shape in get_community_stats() below: (character, win, ascension,
+# game_mode, players, username). The first row is the home-page
+# no-filter case.
+_HOT_FILTER_COMBOS: list[tuple] = [
+    (None, None, None, None, None, None),
+    ("IRONCLAD", None, None, None, None, None),
+    ("SILENT", None, None, None, None, None),
+    ("DEFECT", None, None, None, None, None),
+    ("NECROBINDER", None, None, None, None, None),
+    ("REGENT", None, None, None, None, None),
+]
+
+_REFRESH_INTERVAL_SECONDS = 30
+
+
+def _refresh_hot_stats_once() -> None:
+    """Re-run get_stats() for every hot filter combo and write the
+    result into _stats_cache. Called by both the background refresher
+    thread and the startup pre-warm."""
+    now = time.monotonic()
+    for key in _HOT_FILTER_COMBOS:
+        character, win, ascension, game_mode, players, username = key
+        try:
+            result = get_stats(
+                character=character,
+                win=win,
+                ascension=ascension,
+                game_mode=game_mode,
+                players=players,
+                username=username,
+            )
+            _stats_cache[key] = (now, result)
+        except Exception:
+            # Best-effort. Leave the previous cache entry intact on
+            # failure so users keep seeing the last-good data.
+            pass
+
+
+def start_stats_refresher() -> None:
+    """Spawn the daemon thread that keeps _stats_cache hot.
+
+    Each uvicorn worker runs its own. 4 workers × 6 hot filters every
+    30s = ~48 Mongo aggregations/min total, which is well within the
+    DB's budget and amortised across many user requests. Sharing via
+    Redis is a future optimisation if this becomes measurable cost.
+    """
+    import threading
+
+    def _loop() -> None:
+        # First refresh runs immediately so cache is populated before
+        # any user request arrives. Subsequent runs are paced.
+        while True:
+            try:
+                _refresh_hot_stats_once()
+            except Exception:
+                pass
+            time.sleep(_REFRESH_INTERVAL_SECONDS)
+
+    threading.Thread(target=_loop, daemon=True, name="stats-refresher").start()
 
 
 @router.get("/stats", tags=["Runs"])

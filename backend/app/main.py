@@ -141,6 +141,16 @@ def _warm_run_entity_stats() -> None:
 
     threading.Thread(target=_warm, daemon=True, name="run-stats-warmup").start()
 
+    # Kick off the /api/runs/stats refresher — keeps the per-filter
+    # cache hot so users always hit memory, never wait on a 5-10s
+    # Mongo aggregation.
+    try:
+        from .routers.runs import start_stats_refresher
+
+        start_stats_refresher()
+    except Exception:
+        pass
+
 
 _VERSION_RE = re.compile(r"^v?\d+\.\d+")
 
