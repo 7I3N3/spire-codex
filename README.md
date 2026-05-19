@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="frontend/public/spire-codex-white-silent-black-background.png" alt="Spire Codex logo" width="200" />
+</p>
+
 # Spire Codex
 
 A comprehensive database and API for **Slay the Spire 2** game data, built by reverse-engineering the game files. Supports all **14 languages** shipped with the game.
@@ -124,7 +128,7 @@ spire-codex/
 │   ├── guides/                 # Markdown guide files with YAML frontmatter
 │   ├── guides.json             # Parsed guide data
 │   ├── runs/                   # Submitted run JSON files (per player hash)
-│   └── runs.db                 # SQLite database for run metadata
+│   └── runs.db                 # Legacy SQLite (replaced by MongoDB; kept as offline fallback)
 ├── extraction/                 # Raw game files (not committed)
 │   ├── raw/                    # GDRE extracted Godot project (stable)
 │   ├── decompiled/             # ILSpy output (stable)
@@ -727,7 +731,7 @@ Full docs: [spire-codex.com/developers](https://spire-codex.com/developers)
 - ~~Codex Score & Tier List~~ ✅ — Per-entity grade computed from community runs using **Bayesian shrinkage**: `shrunk = (wins + PRIOR_WEIGHT × baseline) / (n + PRIOR_WEIGHT)`, then scaled to 0–100 and mapped to S/A/B/C/D/F. Prevents tiny-sample noise (a 1-game card going 1/1 doesn't get an S — it regresses to the prior). Pre-warmed on backend startup. Surfaced as `ScoreBadge` on detail-page Stats tab, dedicated tier-list pages, and methodology page at `/leaderboards/scoring`.
 - ~~Detail-page Stats tab~~ ✅ — Score hero badge + prose summary + recent runs links via `EntityRunStats`.
 - **Deck builder** — Interactive deck theorycrafting
-- **Database backend** — Replace JSON loading with SQLite/PostgreSQL
+- **Database backend** — Replace per-language JSON loading with PostgreSQL JSONB (or alternative). Run-submission storage already moved off SQLite to MongoDB (May 2026).
 
 ## Acknowledgments
 

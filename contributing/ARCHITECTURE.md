@@ -21,7 +21,7 @@ The game is built with Godot 4 but all logic is in a C#/.NET 8 DLL, not GDScript
 - **FastAPI** with Pydantic schemas, slowapi rate limiting, GZip compression
 - **25+ routers** in `app/routers/` — one per entity type + guides, runs, feedback, news, merchant
 - **Data service** loads JSON from `data/{lang}/` with LRU caching; `VersionMiddleware` reads `?version=` and threads it through via `ContextVar`
-- **SQLite** (`data/runs.db`) for community run submissions
+- **MongoDB** (self-hosted single-node replica set on the DB origin) for community run submissions. Materialized `stats_summary` collection populated by a background refresher (one worker via a Mongo TTL lease) — API handlers read the precomputed doc in sub-millisecond time. SQLite (`data/runs.db`) is kept as the offline-fallback codepath in `services/runs_db.py` when `MONGO_URL` is unset.
 - **Run entity stats service** (`app/services/run_entity_stats.py`) — computes the Codex Score (Bayesian-shrunk win rate → 0–100 → S/A/B/C/D/F tier) per card/relic/potion. Pre-warmed on FastAPI startup by `_warm_run_entity_stats()` in `main.py` so the first request isn't a cold cache.
 - **Static images** served from `backend/static/images/`
 
@@ -57,7 +57,7 @@ Each parser reads decompiled C# source + localization JSON and outputs structure
 
 - **Next.js 16** App Router with server + client components
 - **Tailwind CSS** with CSS variables for theming
-- **`force-dynamic`** on all pages that fetch from API (API unavailable during Docker build)
+- **On-demand ISR via `dynamic = "force-static"` + `revalidate = N`** on every server-fetching page. Next.js 15+ treats `await params` as dynamic by default — `force-static` overrides that, and the per-request fetch options (`{ next: { revalidate: N } }`) make them participate in ISR rather than fight it. Combined with the CF Cache Rules below, this gets every cacheable page to 50–80ms HIT globally.
 - **TypeScript** strict mode, interfaces in `lib/api.ts`
 
 ### Key Files
@@ -96,11 +96,11 @@ Do NOT use generic Tailwind colors (`text-red-400`, `bg-green-500`) for characte
 
 ## API
 
-All endpoints accept `?lang=` (default: `eng`). Responses are GZip-compressed with 5-minute cache.
+All endpoints accept `?lang=` (default: `eng`). Responses are GZip-compressed; entity reads have a 5-minute browser cache, an hour-long edge cache, run endpoints 30s edge cache.
 
 - **List endpoints**: `GET /api/cards`, `GET /api/monsters`, etc. with filters
 - **Detail endpoints**: `GET /api/cards/{id}`, `GET /api/monsters/{id}`, etc.
-- **Runs**: `POST /api/runs` (submit), `GET /api/runs/stats` (aggregated meta), `GET /api/runs/list` (browse — accepts `seed`, `build_id`, `sort` filters), `GET /api/runs/leaderboard` (ranked wins-only), `GET /api/runs/versions` (distinct game versions), `GET /api/runs/shared/{hash}` (shared run detail — merges `username` from `runs.db` so the shared-run page can show "by {username}"), `GET /api/runs/scores/{type}` (Codex Score per entity)
+- **Runs**: `POST /api/runs` (submit), `GET /api/runs/stats` (aggregated meta — reads from materialized `stats_summary` collection), `GET /api/runs/list` (browse — accepts `seed`, `build_id`, `sort` filters), `GET /api/runs/leaderboard` (ranked wins-only), `GET /api/runs/versions` (distinct game versions), `GET /api/runs/shared/{hash}` (shared run detail — merges `username` from MongoDB so the shared-run page can show "by {username}"), `GET /api/runs/scores/{type}` (Codex Score per entity)
 - **Guides**: `GET /api/guides` (list with filters), `GET /api/guides/{slug}` (detail), `POST /api/guides` (Discord webhook submission)
 - **News**: `GET /api/news`, `GET /api/news/{gid}` — Steam announcement archive (`data/news/{gid}.json`, survives Steam's sliding window)
 - **Merchant config**: `GET /api/merchant/config` — auto-extracted from C# pricing constants
@@ -126,6 +126,26 @@ Constants:
 Tier cutoffs (from `frontend/app/components/ScoreBadge.tsx::scoreToTier`): **S** ≥90, **A** 78–89, **B** 65–77, **C** 50–64, **D** 35–49, **F** <35.
 
 `get_all_entity_scores(entity_type)` returns the full table for one type. Results are cached and pre-warmed on FastAPI startup via `_warm_run_entity_stats()` in `main.py` (background thread, so app boot isn't blocked).
+
+## Performance / Caching
+
+The site serves cached responses in 50–80ms edge-to-end globally (17–25ms warm-tab). Three layers cooperate:
+
+1. **Materialized `stats_summary` collection (MongoDB).** `/api/runs/stats` and per-character variants used to run ~8 aggregations per request against the `runs` collection (~9.9K docs × `$unwind`'d nested arrays = 5–15s tail latency). A background daemon — gated by a Mongo TTL lease so only one worker across the pool runs it — refreshes the hot filter combos every 60s and writes the result to `stats_summary`. API handlers do `find_one({_id: filter_key})`. Sub-millisecond reads, hidden from the user path. See `services/runs_db_mongo.py::refresh_stats_summary` and `routers/runs.py::start_stats_refresher`.
+
+2. **Backend cache-control middleware** (`main.py::CORSStaticMiddleware`). Path-tiered `Cache-Control` so CF and browsers cache appropriately:
+   - `/static/*` → `max-age=31536000, immutable`
+   - `/api/runs/*` → `s-maxage=30` (live-ish for new submissions)
+   - `/api/*` → `s-maxage=3600` (entity data, only changes on deploy)
+   - `/metrics`, `/health` → `no-store` (Prometheus scrapes)
+   - Headers are skipped on 4xx/5xx so errors don't get cached.
+
+3. **Cloudflare Cache Rules + ISR.** Two CF Cache Rules opt JSON / HTML into caching (off by default for `Content-Type: application/json`):
+   - **API rule**: URI starts with `/api/` → eligible, use origin TTL.
+   - **HTML rule**: URI doesn't start with `/api/` and doesn't start with `/static/` → eligible, use origin TTL.
+   - Pages set their own `revalidate = N` (60s for `/`, 300s for tier-list, 3600s for entity data). Combined with `dynamic = "force-static"`, Next.js emits `Cache-Control: s-maxage=N, stale-while-revalidate=...` and CF honors it.
+
+Pages that intrinsically can't be cached (those using `searchParams` for filters: `/leaderboards`, `/tier-list/cards`, `/tier-list/relics`, `/news`) stay BYPASS and serve at 130–360ms from origin. They're the trade — caching them would require moving the filter logic client-side.
 
 Surfaces:
 - `GET /api/runs/scores/{type}` — bulk feed for tier-list pages
