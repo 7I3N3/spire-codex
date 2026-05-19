@@ -13,7 +13,9 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/acts/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/acts/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return { title: "Act Not Found - Slay the Spire 2 (sts2) | Spire Codex" };
     const act = await res.json();
     const title = `Act - ${act.name} - Slay the Spire 2 (sts2) | Spire Codex`;
@@ -35,7 +37,9 @@ export default async function Page({ params }: Props) {
   let jsonLd = null;
   let act = null;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/acts/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/acts/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (res.ok) {
       act = await res.json();
       jsonLd = buildDetailPageJsonLd({

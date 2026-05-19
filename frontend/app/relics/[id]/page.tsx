@@ -15,7 +15,9 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/relics/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/relics/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return { title: "Relic Not Found - Slay the Spire 2 (sts2) | Spire Codex" };
     const relic = await res.json();
     const desc = stripTags(relic.description || "");
@@ -42,7 +44,9 @@ export default async function Page({ params }: Props) {
   let jsonLd = null;
   let relic = null;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/relics/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/relics/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (res.ok) {
       relic = await res.json();
       const desc = stripTags(relic.description || "");

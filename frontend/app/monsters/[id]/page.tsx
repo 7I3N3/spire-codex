@@ -14,7 +14,9 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/monsters/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/monsters/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return { title: "Monster Not Found - Slay the Spire 2 (sts2) | Spire Codex" };
     const monster = await res.json();
     const hpText = monster.min_hp ? `${monster.min_hp}${monster.max_hp && monster.max_hp !== monster.min_hp ? `\u2013${monster.max_hp}` : ""} HP` : "";
@@ -42,7 +44,9 @@ export default async function Page({ params }: Props) {
   let jsonLd = null;
   let monster = null;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/monsters/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/monsters/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (res.ok) {
       monster = await res.json();
       const hpText = monster.min_hp ? `${monster.min_hp}${monster.max_hp && monster.max_hp !== monster.min_hp ? `\u2013${monster.max_hp}` : ""} HP` : "";

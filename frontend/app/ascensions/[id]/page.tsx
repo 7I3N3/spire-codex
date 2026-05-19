@@ -13,7 +13,9 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/ascensions/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/ascensions/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return { title: "Ascension Not Found - Slay the Spire 2 (sts2) | Spire Codex" };
     const asc = await res.json();
     const desc = stripTags(asc.description);
@@ -36,7 +38,9 @@ export default async function Page({ params }: Props) {
   let jsonLd = null;
   let asc = null;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/ascensions/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/ascensions/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (res.ok) {
       asc = await res.json();
       const desc = stripTags(asc.description);

@@ -12,7 +12,9 @@ type Props = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/cards/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/cards/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (!res.ok) return { title: "Card Not Found - Slay the Spire 2 (sts2) | Spire Codex" };
     const card = await res.json();
     const desc = stripTags(card.description || "");
@@ -42,7 +44,9 @@ export default async function Page({ params }: Props) {
   let jsonLd = null;
   let card = null;
   try {
-    const res = await fetch(`${API_INTERNAL}/api/cards/${id}`);
+    const res = await fetch(`${API_INTERNAL}/api/cards/${id}`, {
+      next: { revalidate: 3600 },
+    });
     if (res.ok) {
       card = await res.json();
       const desc = stripTags(card.description || "");
