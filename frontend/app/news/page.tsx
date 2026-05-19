@@ -8,10 +8,8 @@ import { newsExcerpt, formatNewsDate, newsSlugForArticle } from "@/lib/steam-new
 
 const API = process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-// Render at request time, not build time. The Docker build container
-// can't reach the backend, so a build-time prerender would catch the
-// fetch error and bake an empty list into the image.
-export const dynamic = "force-dynamic";
+// 30min ISR. The on-demand generation pattern means Docker build
+// doesn't need backend access — first request after deploy regenerates.
 export const revalidate = 1800;
 
 // Meta follows the standard `Slay the Spire 2 {Topic} - {Descriptor} | Spire Codex`
