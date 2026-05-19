@@ -92,16 +92,17 @@
       register: up
       changed_when: "'Started' in up.stderr or 'Created' in up.stderr"
 
-    - name: Wait for Umami to be ready (HTTP 200 from nginx → umami)
-      uri:
-        url: "http://localhost/api/heartbeat"
-        headers:
-          Host: "analytics.spire-codex.com"
-        status_code: 200
+    # Bypass nginx — the dashboard allowlist would 403 a loopback hit
+    # from the DO host. Hitting the umami container directly via the
+    # docker bridge also avoids spinning until the analytics CNAME
+    # propagates.
+    - name: Wait for Umami to be ready
+      shell: docker exec web-server wget -qO- -S http://umami:3000/api/heartbeat 2>&1 | grep -q "200 OK"
       register: heartbeat
       retries: 20
       delay: 3
-      until: heartbeat.status == 200
+      until: heartbeat.rc == 0
+      changed_when: false
 
     - name: Done — next steps
       debug:
