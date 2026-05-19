@@ -263,6 +263,61 @@ server {
       }
   }
 
+  # Umami self-hosted analytics. Single container at umami:3000 on
+  # nginx_web-network. Subdomain so it's isolated from spire-codex.com
+  # (and easy to lock down at the CF edge if needed).
+  #
+  # The tracker endpoints (script.js + /api/send) must stay reachable
+  # by every visitor — those are the actual page-view ingest paths. The
+  # dashboard UI (everything else: /login, /websites, etc.) is gated
+  # to the admin IP via the location-level allow/deny below. The split
+  # keeps tracking working from the open internet while making the
+  # admin surface invisible to drive-by scanners.
+  #
+  # First-time setup: see playbooks/umami-install.yml.
+  server {
+      listen 80;
+      server_name analytics.spire-codex.com;
+
+      # Don't log analytics traffic — the metrics-monitor scraper does
+      # not hit this host, and tracker pings would 10x the access log.
+      access_log off;
+
+      # Tracker script — every visitor's browser fetches this from
+      # the SSR'd <script src=...>. Must be public.
+      location = /script.js {
+          proxy_pass http://umami:3000;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+      }
+
+      # Page-view ingest endpoint — POST'd by script.js for every nav.
+      # Must accept traffic from every visitor IP. Umami applies its
+      # own internal sender check via the website_id.
+      location = /api/send {
+          proxy_pass http://umami:3000;
+          proxy_http_version 1.1;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      }
+
+      # Everything else (dashboard UI, login, websites CRUD, etc.) is
+      # admin-only. allow/deny is applied AFTER nginx's real_ip module
+      # rewrites $remote_addr from CF-Connecting-IP, so the comparison
+      # is against the actual visitor IP (not Cloudflare's edge).
+      location / {
+          allow {{ admin_ip }};
+          deny all;
+          proxy_pass http://umami:3000;
+          proxy_http_version 1.1;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+      }
+  }
+
   server {
         listen 80 default_server;
         listen [::]:80 default_server;
