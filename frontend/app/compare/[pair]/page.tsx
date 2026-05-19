@@ -5,6 +5,7 @@ import JsonLd from "@/app/components/JsonLd";
 import { buildDetailPageJsonLd } from "@/lib/jsonld";
 import CompareDetail from "./CompareDetail";
 
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const API_INTERNAL =

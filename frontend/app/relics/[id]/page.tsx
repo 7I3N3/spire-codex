@@ -4,7 +4,10 @@ import { stripTags, buildLanguageAlternates} from "@/lib/seo";
 import JsonLd from "@/app/components/JsonLd";
 import { buildDetailPageJsonLd, buildFAQPageJsonLd } from "@/lib/jsonld";
 
-// Relic data only changes on deploy — 1h ISR + CF edge cache.
+// Relic data only changes on deploy. force-static + revalidate
+// keeps Next.js from auto-marking the page dynamic just because we
+// `await params` — needed for CF edge caching to engage.
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const API_INTERNAL = process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
