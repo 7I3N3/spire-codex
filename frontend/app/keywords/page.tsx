@@ -3,7 +3,7 @@ import JsonLd from "@/app/components/JsonLd";
 import RichDescription from "@/app/components/RichDescription";
 import { buildCollectionPageJsonLd } from "@/lib/jsonld";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const API = process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 

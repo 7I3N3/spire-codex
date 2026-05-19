@@ -8,7 +8,11 @@ import { buildCollectionPageJsonLd, buildBreadcrumbJsonLd } from "@/lib/jsonld";
 import { SLUG_MAP } from "../slug-map";
 import BrowseDetail from "./BrowseDetail";
 
-export const dynamic = "force-dynamic";
+// On-demand ISR: HTML caches for 1h at CF edge / Next.js memory.
+// First visitor per slug per hour triggers regen against the live
+// backend; everyone else gets the cached page (~20ms response).
+// Card data only changes on deploy so 1h is fine.
+export const revalidate = 3600;
 
 const API =
   process.env.API_INTERNAL_URL ||

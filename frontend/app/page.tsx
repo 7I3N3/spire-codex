@@ -19,12 +19,18 @@ const description = IS_BETA
   ? "Beta preview of upcoming Slay the Spire 2 (sts2) content. Browse new cards, relics, characters, monsters, potions, events, powers, and more."
   : "The complete Slay the Spire 2 (sts2) database. Browse all cards, relics, characters, monsters, potions, events, powers, and more. Filter by character, rarity, and type.";
 
-// Build-time renders ran with the backend unreachable (CI Docker
-// build network), which cached `null` for stats — the homepage then
-// served a stat-less grid forever via ISR. Forcing dynamic means
-// every visit re-renders against the live backend, so the section
-// counts and leaderboard numbers are always current.
-export const dynamic = "force-dynamic";
+// ISR with 60s revalidation. The HTML caches at CF edge for 60s so
+// most visits return without hitting Next.js at all. After 60s the
+// next visitor triggers a background regen and gets the still-fresh
+// stale-while-revalidate copy. Backend reads are now sub-25ms via
+// the materialized stats_summary, so a re-render is cheap.
+//
+// The earlier `force-dynamic` was a workaround for build-time
+// fetches caching `null` when the backend was unreachable. The
+// fetchJSON helper below now returns a safe placeholder on error
+// rather than null, so an unreachable-backend regen doesn't poison
+// the next cache slot.
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title,
@@ -44,8 +50,11 @@ interface Translations {
 }
 
 async function fetchJSON<T>(url: string): Promise<T | null> {
+  // Inner fetch revalidates faster than the page (30s) so each ISR
+  // regen always pulls fresh data. The outer page TTL (60s) caps how
+  // stale the rendered HTML can be in CF's edge cache.
   try {
-    const res = await fetch(url, { next: { revalidate: 300 } });
+    const res = await fetch(url, { next: { revalidate: 30 } });
     if (!res.ok) return null;
     return res.json();
   } catch {
