@@ -4,9 +4,13 @@ import { stripTags, stripTagsFlat, buildLanguageAlternates} from "@/lib/seo";
 import JsonLd from "@/app/components/JsonLd";
 import { buildDetailPageJsonLd, buildFAQPageJsonLd } from "@/lib/jsonld";
 
-// 1h ISR — card data only changes on deploy. Without this, Next.js
-// treats `params: Promise<...>` + async page as dynamic and serves
-// `Cache-Control: no-store`, which makes CF refuse to cache.
+// 1h on-demand ISR. force-static + revalidate forces Next.js to
+// cache even with async-params pages — without it, Next 15+ sees
+// `await params` and marks the page dynamic, emitting
+// `Cache-Control: no-store` which makes CF refuse to cache.
+// dynamicParams=true (default) means any [id] is generated on demand
+// then cached for the revalidate window.
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 const API_INTERNAL = process.env.API_INTERNAL_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
