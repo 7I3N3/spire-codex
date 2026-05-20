@@ -1,0 +1,116 @@
+---
+# Host-level monitoring: node_exporter container + nginx wiring so
+# the scraper can reach it via https://spire-codex.com/node-metrics.
+#
+# Before running:
+#   1. Confirm playbooks/sync-config.yml has been run since the
+#      `/node-metrics` location block was added to nginx.conf.j2 —
+#      otherwise the nginx config on disk doesn't expose the endpoint.
+#
+# Usage:
+#   ./bin/do-ansible playbooks/monitoring-install.yml --limit do_origin
+#
+# What this does:
+#   - Pulls prom/node-exporter:latest and brings up the monitoring
+#     compose stack (host networking, /:/host:ro mount).
+#   - Recreates the nginx (web-server) container with
+#     `--add-host=host.docker.internal:host-gateway`, which is what
+#     lets nginx reach node_exporter's 0.0.0.0:9100 on the host
+#     network. Without it the nginx /node-metrics location 502s.
+#
+# Re-running is idempotent: docker compose up -d skips when nothing
+# changed, and the web-server recreate is conditional on the
+# host-gateway flag not already being present.
+
+- name: Install node_exporter + wire nginx
+  hosts: digital_ocean
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Bring up the monitoring stack (node_exporter)
+      command: docker compose -f docker-compose.monitoring.yml up -d
+      args:
+        chdir: "{{ spire_codex_dir }}"
+      register: monitoring_up
+      changed_when:
+        "'Started' in monitoring_up.stderr or 'Created' in monitoring_up.stderr"
+
+    # node_exporter on host networking binds 0.0.0.0:9100, which means
+    # without a firewall rule the public IP exposes system metrics to
+    # the internet. Lock it down with the same RFC1918+loopback pattern
+    # we used for Mongo (see playbooks/mongo-lockdown.yml).
+    - name: Allow private + loopback to reach 9100
+      iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: "9100"
+        ctstate: NEW
+        jump: ACCEPT
+        source: "{{ item }}"
+        action: insert
+        comment: "spire-codex: allow private to node_exporter"
+      loop:
+        - 10.0.0.0/8
+        - 127.0.0.0/8
+        - 172.16.0.0/12
+        - 192.168.0.0/16
+      register: accepts
+
+    - name: DROP all other inbound traffic to 9100
+      iptables:
+        chain: INPUT
+        protocol: tcp
+        destination_port: "9100"
+        ctstate: NEW
+        jump: DROP
+        action: append
+        comment: "spire-codex: block public node_exporter"
+      register: drop_rule
+
+    - name: Persist iptables ruleset
+      shell: iptables-save > /etc/sysconfig/iptables
+      when: accepts.changed or drop_rule.changed
+
+    - name: Check whether web-server already has host-gateway mapping
+      shell: |
+        docker inspect web-server \
+          --format '{{ "{{range .HostConfig.ExtraHosts}}{{println .}}{{end}}" }}' \
+          2>/dev/null | grep -q '^host.docker.internal:host-gateway$'
+      register: ws_has_hostgw
+      changed_when: false
+      failed_when: false
+
+    - name: Recreate web-server with --add-host=host.docker.internal:host-gateway
+      when: ws_has_hostgw.rc != 0
+      block:
+        - name: Stop + remove existing web-server
+          command: docker rm -f web-server
+        - name: Start web-server with the host-gateway flag
+          command: >
+            docker run -d
+            --name web-server
+            --restart unless-stopped
+            --network nginx_web-network
+            --add-host host.docker.internal:host-gateway
+            -p 80:80
+            -p 443:443
+            -v /var/www:/var/www:ro
+            -v /data/nginx/nginx/logs:/var/log/nginx:rw
+            -v /etc/ssl/local:/etc/ssl/local:ro
+            -v /data/nginx/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+            nginx:alpine
+
+    - name: Smoke-test: node_exporter reachable from inside nginx
+      shell: docker exec web-server wget -qO- http://host.docker.internal:9100/metrics | head -c 200
+      register: probe
+      changed_when: false
+    - debug:
+        msg: "{{ probe.stdout_lines | default(['(empty — check node_exporter logs)']) }}"
+
+    - name: Done
+      debug:
+        msg: |
+          node_exporter is up on the DO host:9100.
+          Scrape target: https://spire-codex.com/node-metrics
+          (access restricted to metrics_monitor_ip via nginx)
