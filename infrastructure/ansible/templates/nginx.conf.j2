@@ -126,6 +126,21 @@ http {
           proxy_set_header Host $host;
       }
 
+      # Rewrite character-icon requests that the Spire Compendium
+      # desktop app sends to the wrong directory. The Tauri app's
+      # frontend asks for /static/images/relics/{character}.webp
+      # (e.g. .../ironclad.webp, .../regent.webp) when it means the
+      # character icon, which actually lives at
+      # /static/images/characters/character_icon_{character}.webp.
+      # ~38 404s/day from this pattern before; this serves the
+      # correct file silently while the Compendium gets fixed
+      # upstream. Regex is anchored to the exact 5 character names —
+      # we don't want to start aliasing arbitrary relic names that
+      # happen to share their slug with non-relic assets.
+      location ~ ^/static/images/relics/(ironclad|silent|defect|necrobinder|regent)\.(webp|png)$ {
+          rewrite ^/static/images/relics/(.+)\.(.+)$ /static/images/characters/character_icon_$1.$2 last;
+      }
+
       location /static/ {
           proxy_pass http://spire-codex-backend:8000;
           proxy_http_version 1.1;
