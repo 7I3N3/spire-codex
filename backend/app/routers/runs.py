@@ -49,18 +49,22 @@ def _load_run_blob(run_hash: str) -> str | None:
 
 
 @router.post("", tags=["Runs"])
-@limiter.limit("600/hour")
+@limiter.limit("3000/hour")
 async def submit_run_endpoint(request: Request, username: str | None = None):
     """Submit a run for community stats. Paste the .run file JSON content. Optional ?username= param.
 
-    Rate limit: 600/hour (~10/min sustained, but allows bursts). Sized
-    for the Overwolf-launch scenario where a desktop-app user has a
-    backlog of hundreds of saved runs and wants to upload them all
-    after first install. The previous default of 60/min would have
-    forced a power user with 200 runs to wait ~4 minutes mid-upload.
-    Duplicate detection via run_hash UNIQUE constraint short-circuits
-    re-submission attempts, so the practical write load is bounded by
-    actual distinct runs per uploader.
+    Rate limit: 3000/hour (~50/min sustained, with room for burst). The
+    earlier 600/hour ceiling was sized for "a few hundred backlog runs
+    on first install" but silently capped users with larger histories
+    — a Discord report of someone with 1000+ saved runs would have
+    dropped 400 of them at 600/hour. Each submission is ~10ms backend
+    work (Mongo insert + JSON file write + metrics bump) and duplicate
+    detection short-circuits at ~3ms via the run_hash UNIQUE
+    constraint, so actual write load is bounded by *distinct* runs per
+    uploader, not raw submission count. Easy to lower again if scraper
+    abuse shows up in
+    `spire_codex_api_errors_total{status_code="429"}` against this
+    endpoint.
     """
     if os.environ.get("DISABLE_RUN_SUBMISSIONS"):
         run_errors.labels(reason="disabled").inc()
