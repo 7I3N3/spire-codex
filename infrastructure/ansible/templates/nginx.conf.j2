@@ -101,6 +101,23 @@ http {
           proxy_set_header X-Real-IP $remote_addr;
       }
 
+      # Host-level metrics from node_exporter. node_exporter runs with
+      # `network_mode: host` (so it sees the host's real eth0 / lo /
+      # docker0 interfaces rather than its own container ns), which
+      # means nginx — on the docker bridge — has to dial back to the
+      # host via `host.docker.internal`. The web-server container is
+      # launched with `--add-host=host.docker.internal:host-gateway`
+      # by playbooks/monitoring-install.yml; without that flag this
+      # location 502s.
+      location /node-metrics {
+          allow {{ metrics_monitor_ip }};
+          deny all;
+          proxy_pass http://host.docker.internal:9100/metrics;
+          proxy_http_version 1.1;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-IP $remote_addr;
+      }
+
       location /health {
           allow {{ metrics_monitor_ip }};
           deny all;
