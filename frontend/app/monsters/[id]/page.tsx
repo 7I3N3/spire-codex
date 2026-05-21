@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MonsterDetail from "./MonsterDetail";
 import JsonLd from "@/app/components/JsonLd";
 import { buildDetailPageJsonLd, buildFAQPageJsonLd } from "@/lib/jsonld";
-import { redirectMissingEntity } from "@/lib/redirect-helpers";
+import { clipMetaDescription, buildLanguageAlternates, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
@@ -23,17 +23,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const hpText = monster.min_hp ? `${monster.min_hp}${monster.max_hp && monster.max_hp !== monster.min_hp ? `\u2013${monster.max_hp}` : ""} HP` : "";
     const desc = `${monster.type} monster${hpText ? ` \u00b7 ${hpText}` : ""}`;
     const title = `Monster - ${monster.name} - ${monster.type} - Slay the Spire 2 (sts2) | Spire Codex`;
-    const metaDesc = `${monster.name} is a ${monster.type} monster in Slay the Spire 2. ${hpText ? `${hpText}.` : ""} ${monster.moves ? `${monster.moves.length} moves.` : ""}`;
+    const movesText = monster.moves?.length ? `${monster.moves.length} known moves.` : "";
+    const metaDesc = clipMetaDescription(
+      `Slay the Spire 2 ${monster.type} monster — ${monster.name}.${hpText ? ` ${hpText}.` : ""}${movesText ? ` ${movesText}` : ""}`,
+    );
     return {
       title,
       description: metaDesc,
       openGraph: {
+        type: "article",
+        siteName: SITE_NAME,
+        url: `${SITE_URL}/monsters/${id}`,
         title,
         description: metaDesc,
         images: monster.image_url ? [{ url: `${API_PUBLIC}${monster.image_url}` }] : [],
       },
-      twitter: { card: "summary_large_image" },
-      alternates: { canonical: `/monsters/${id}` },
+      twitter: { card: "summary_large_image", title, description: metaDesc },
+      alternates: { canonical: `/monsters/${id}`, languages: buildLanguageAlternates(`/monsters/${id}`) },
     };
   } catch {
     return { title: "Database - Slay the Spire 2 (sts2) | Spire Codex" };
@@ -44,7 +50,6 @@ export default async function Page({ params }: Props) {
   const { id } = await params;
   let jsonLd = null;
   let monster = null;
-  let apiUnreachable = false;
   try {
     const res = await fetch(`${API_INTERNAL}/api/monsters/${id}`, {
       next: { revalidate: 3600 },
@@ -71,10 +76,7 @@ export default async function Page({ params }: Props) {
       ];
       jsonLd = [...detailJsonLd, buildFAQPageJsonLd(faqQuestions)];
     }
-  } catch {
-    apiUnreachable = true;
-  }
-  if (!monster && !apiUnreachable) redirectMissingEntity("monsters", id);
+  } catch {}
   return (
     <>
       {jsonLd && <JsonLd data={jsonLd} />}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { buildLanguageAlternates } from "@/lib/seo";
-import { permanentRedirect } from "next/navigation";
+import { buildLanguageAlternates, DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Card } from "@/lib/api";
 import JsonLd from "@/app/components/JsonLd";
@@ -35,10 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      url: `${SITE_URL}/cards/browse/${slug}`,
       title: `${entry.label} - Slay the Spire 2 (sts2) | Spire Codex`,
       description,
+      images: [{ url: DEFAULT_OG_IMAGE }],
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", title: `${entry.label} - Slay the Spire 2 (sts2) | Spire Codex`, description },
     alternates: { canonical: `/cards/browse/${slug}`, languages: buildLanguageAlternates(`/cards/browse/${slug}`) },
   };
 }
@@ -63,11 +67,8 @@ export default async function BrowsePage({ params }: Props) {
   const { slug } = await params;
   const entry = SLUG_MAP[slug];
 
-  // Unknown browse slug → 308 back to /cards. The slug map is the
-  // exhaustive list of valid filters; anything else is a stale URL
-  // we'd rather forward equity from than 404.
   if (!entry) {
-    permanentRedirect("/cards");
+    notFound();
   }
 
   const cards = await fetchFilteredCards(entry.params);

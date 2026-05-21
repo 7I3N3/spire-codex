@@ -1,16 +1,43 @@
 import type { Metadata } from "next";
-import { buildLanguageAlternates } from "@/lib/seo";
+import JsonLd from "@/app/components/JsonLd";
+import { buildBreadcrumbJsonLd } from "@/lib/jsonld";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL, buildLanguageAlternates } from "@/lib/seo";
 import SubmitRunClient from "./SubmitRunClient";
 
 export const dynamic = "force-dynamic";
 
+const title = "Submit a Run - Slay the Spire 2 | Spire Codex";
+const description =
+  "Upload your Slay the Spire 2 (sts2) run history. Drop .run files or paste JSON to share with the community and feed deck-choice and win-rate analytics.";
+
 export const metadata: Metadata = {
-  title: "Submit a Run - Slay the Spire 2 | Spire Codex",
-  description:
-    "Submit your Slay the Spire 2 run history to share with the community. Drag and drop your .run files or paste JSON to analyze deck evolution, card choices, and floor-by-floor stats.",
-  alternates: { canonical: "/leaderboards/submit", languages: buildLanguageAlternates("/leaderboards/submit") },
+  title,
+  description,
+  alternates: {
+    canonical: "/leaderboards/submit",
+    languages: buildLanguageAlternates("/leaderboards/submit"),
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    url: `${SITE_URL}/leaderboards/submit`,
+    title,
+    description,
+    images: [{ url: DEFAULT_OG_IMAGE }],
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function SubmitRunPage() {
-  return <SubmitRunClient />;
+  const jsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", href: "/" },
+    { name: "Leaderboards", href: "/leaderboards" },
+    { name: "Submit a Run", href: "/leaderboards/submit" },
+  ]);
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      <SubmitRunClient />
+    </>
+  );
 }
