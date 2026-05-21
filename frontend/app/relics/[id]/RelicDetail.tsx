@@ -283,7 +283,7 @@ export default function RelicDetail({ initialRelic }: { initialRelic?: Relic | n
               path: `/api/relics?pool=${encodeURIComponent(relic.pool)}&lang=${lang}`,
             },
             {
-              label: `${relic.rarity} relics`,
+              label: relic.rarity.endsWith("Relic") ? `${relic.rarity}s` : `${relic.rarity} Relics`,
               path: `/api/relics?rarity=${encodeURIComponent(relic.rarity)}&lang=${lang}`,
             },
           ]}
