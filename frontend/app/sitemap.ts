@@ -188,7 +188,7 @@ async function getLastModBuckets(now: Date): Promise<{
   // network-isolated CI shouldn't hard-fail the sitemap).
   let contentDate = new Date(now);
   contentDate.setUTCHours(0, 0, 0, 0);
-  let staticDate = new Date(contentDate);
+  const staticDate = new Date(contentDate);
 
   try {
     const res = await fetch(`${API}/api/changelogs`, { next: { revalidate: 1800 } });
