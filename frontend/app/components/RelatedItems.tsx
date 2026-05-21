@@ -86,7 +86,7 @@ export default function RelatedItems({
   }, [currentId, route, groupsKey]);
 
   return (
-    <details className="mt-6 group" open>
+    <details className="mt-6 group">
       <summary className="text-sm text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors flex items-center gap-1 cursor-pointer list-none">
         <svg
           aria-hidden
