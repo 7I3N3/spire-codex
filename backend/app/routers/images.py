@@ -1,6 +1,7 @@
 """Image browsing and download API endpoints."""
 
 import io
+import re
 import zipfile
 from pathlib import Path
 
@@ -11,6 +12,48 @@ router = APIRouter(prefix="/api/images", tags=["Images"])
 
 STATIC_DIR = Path(__file__).resolve().parents[2] / "static"
 IMAGES_DIR = STATIC_DIR / "images"
+BETA_DIR = IMAGES_DIR / "beta"
+VERSION_RE = re.compile(r"^v\d+\.\d+\.\d+(?:-beta)?$")
+
+
+def _available_beta_versions() -> list[str]:
+    """All v* subdirs of static/images/beta/, sorted newest-first."""
+    if not BETA_DIR.is_dir():
+        return []
+    versions = [
+        p.name for p in BETA_DIR.iterdir() if p.is_dir() and VERSION_RE.match(p.name)
+    ]
+    # Newest first so the dropdown defaults sensibly.
+    return sorted(
+        versions,
+        key=lambda v: [int(x) for x in v.lstrip("v").split("-")[0].split(".")],
+        reverse=True,
+    )
+
+
+def _resolve_beta_version(version: str | None) -> str | None:
+    """Validate `version` if given; otherwise resolve to whatever `latest` points at.
+
+    Returns None if there's no beta tree at all (fresh install).
+    """
+    if version:
+        if not VERSION_RE.match(version):
+            raise HTTPException(
+                status_code=400, detail=f"Invalid version format: {version}"
+            )
+        if not (BETA_DIR / version).is_dir():
+            raise HTTPException(
+                status_code=404, detail=f"Beta version not found: {version}"
+            )
+        return version
+    latest = BETA_DIR / "latest"
+    if latest.is_symlink():
+        # readlink returns just the target (e.g. "v0.106.0"), not an absolute path.
+        return latest.readlink().name
+    # Fallback: pick the highest version directory if `latest` symlink is missing.
+    versions = _available_beta_versions()
+    return versions[0] if versions else None
+
 
 # Category definitions: id -> (display name, path relative to images/, recursive)
 CATEGORIES: dict[str, tuple[str, str, bool, list[str] | None]] = {
@@ -144,12 +187,29 @@ EXCLUDED_SUBDIRS: dict[str, tuple[str, ...]] = {
 }
 
 
-def _get_images_for_category(category_id: str) -> list[dict[str, str]]:
-    """Return list of image dicts for a category (all files on disk)."""
+def _get_images_for_category(
+    category_id: str, version: str | None = None
+) -> list[dict[str, str]]:
+    """Return list of image dicts for a category (all files on disk).
+
+    Beta categories (id starts with `beta-`) are version-aware: the
+    `base_path` from CATEGORIES is `beta/cards`, but on disk the file
+    actually lives at `beta/<version>/cards`. We splice the version
+    segment in here so CATEGORIES itself stays version-agnostic.
+    """
     if category_id not in CATEGORIES:
         return []
 
     _display_name, base_path, recursive, explicit_files = CATEGORIES[category_id]
+
+    # For per-version beta categories, redirect to the versioned subdir.
+    # `version` is resolved upstream; we only swap the path here.
+    if category_id.startswith("beta-") and base_path.startswith("beta/"):
+        if version is None:
+            return []  # no beta versions on disk yet
+        rest = base_path[len("beta/") :]
+        base_path = f"beta/{version}/{rest}"
+
     dir_path = IMAGES_DIR / base_path
 
     if not dir_path.exists():
@@ -287,18 +347,33 @@ def search_images(request: Request, search: str = "", limit: int = 10):
     return matches
 
 
+@router.get("/beta/versions", tags=["Images"])
+def beta_versions():
+    """List the beta versions available under static/images/beta/.
+
+    Used by the /images version selector. `latest` is the symlink target.
+    """
+    versions = _available_beta_versions()
+    latest = _resolve_beta_version(None)
+    return {"versions": versions, "latest": latest}
+
+
 @router.get("", tags=["Images"])
-def list_image_categories(request: Request):
+def list_image_categories(request: Request, version: str | None = None):
     """Return all image categories with their contents.
 
     The gallery listing dedupes `foo.png` + `foo.webp` to a single entry
     (prefers webp) so the UI isn't noisy. The `formats` field still reflects
     every extension on disk so the download split-button can offer PNG-only
     zips.
+
+    `version=v0.106.0` scopes the `beta-*` categories to that ingest;
+    omit to use whatever `beta/latest` points at.
     """
+    resolved_version = _resolve_beta_version(version)
     result = []
     for cat_id, (display_name, *_) in CATEGORIES.items():
-        all_files = _get_images_for_category(cat_id)
+        all_files = _get_images_for_category(cat_id, resolved_version)
         display_images = _dedupe_for_gallery(all_files)
         result.append(
             {
@@ -313,16 +388,25 @@ def list_image_categories(request: Request):
 
 
 @router.get("/{category}/download", tags=["Images"])
-def download_category_zip(category: str, request: Request, format: str | None = None):
+def download_category_zip(
+    category: str,
+    request: Request,
+    format: str | None = None,
+    version: str | None = None,
+):
     """Download all images in a category as a zip file.
 
     Optional `?format=` query param filters to a single extension (e.g. `png`,
-    `webp`, `gif`). Omit to include every file in the category.
+    `webp`, `gif`). Omit to include every file in the category. For beta
+    categories, `?version=v0.106.0` selects which patch's images to bundle.
     """
     if category not in CATEGORIES:
         raise HTTPException(status_code=404, detail=f"Category '{category}' not found")
 
-    images = _get_images_for_category(category)
+    resolved_version = (
+        _resolve_beta_version(version) if category.startswith("beta-") else None
+    )
+    images = _get_images_for_category(category, resolved_version)
     fmt = (format or "").lower().lstrip(".")
     if fmt:
         images = [img for img in images if img["filename"].lower().endswith(f".{fmt}")]
