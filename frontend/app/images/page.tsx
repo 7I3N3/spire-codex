@@ -25,7 +25,15 @@ const FORMAT_LABELS: Record<string, string> = {
   jpeg: "JPEG",
 };
 
-function DownloadSplitButton({ categoryId, formats }: { categoryId: string; formats: string[] }) {
+function DownloadSplitButton({
+  categoryId,
+  formats,
+  betaVersion,
+}: {
+  categoryId: string;
+  formats: string[];
+  betaVersion?: string;
+}) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +50,12 @@ function DownloadSplitButton({ categoryId, formats }: { categoryId: string; form
   }, [open]);
 
   const hasMultipleFormats = formats.length > 1;
-  const downloadUrl = `${API}/api/images/${categoryId}/download`;
+  // Append `?version=` for beta categories so the zip pulls from the
+  // user-selected ingest dir, not whatever `latest` points at.
+  const betaQuery = categoryId.startsWith("beta-") && betaVersion
+    ? `version=${encodeURIComponent(betaVersion)}`
+    : "";
+  const downloadUrl = `${API}/api/images/${categoryId}/download${betaQuery ? `?${betaQuery}` : ""}`;
 
   return (
     <div ref={ref} className="relative inline-flex" onClick={(e) => e.stopPropagation()}>
@@ -79,7 +92,7 @@ function DownloadSplitButton({ categoryId, formats }: { categoryId: string; form
               {formats.map((ext) => (
                 <a
                   key={ext}
-                  href={`${downloadUrl}?format=${ext}`}
+                  href={`${downloadUrl}${betaQuery ? "&" : "?"}format=${ext}`}
                   onClick={() => setOpen(false)}
                   className="block px-3 py-1.5 text-xs text-[var(--text-primary)] hover:bg-[var(--bg-card-hover)] transition-colors"
                 >
@@ -98,13 +111,54 @@ export default function ImagesPage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
+  const [betaVersions, setBetaVersions] = useState<string[]>([]);
+  const [selectedBetaVersion, setSelectedBetaVersion] = useState<string>("");
 
+  // Hydrate the version dropdown from /api/images/beta/versions, then
+  // honor whatever's in the ?version= query string. Persisting selection
+  // in the URL makes the view shareable — link Discord at a specific
+  // beta's art without needing app state.
   useEffect(() => {
-    fetch(`${API}/api/images`)
+    fetch(`${API}/api/images/beta/versions`)
+      .then((r) => r.json())
+      .then((data: { versions: string[]; latest: string | null }) => {
+        setBetaVersions(data.versions ?? []);
+        const fromUrl = typeof window !== "undefined"
+          ? new URLSearchParams(window.location.search).get("version")
+          : null;
+        setSelectedBetaVersion(fromUrl && data.versions?.includes(fromUrl) ? fromUrl : (data.latest ?? ""));
+      })
+      .catch(() => {
+        // If versions endpoint isn't available yet (old backend), fall back gracefully.
+        setBetaVersions([]);
+        setSelectedBetaVersion("");
+      });
+  }, []);
+
+  // Refetch categories whenever the selected beta version changes — the
+  // backend swaps `beta/cards` -> `beta/<version>/cards` server-side.
+  useEffect(() => {
+    setLoading(true);
+    const url = selectedBetaVersion
+      ? `${API}/api/images?version=${encodeURIComponent(selectedBetaVersion)}`
+      : `${API}/api/images`;
+    fetch(url)
       .then((r) => r.json())
       .then((data: Category[]) => setCategories(data))
       .finally(() => setLoading(false));
-  }, []);
+  }, [selectedBetaVersion]);
+
+  // Reflect selection in URL so refresh / share-link works.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (selectedBetaVersion) {
+      url.searchParams.set("version", selectedBetaVersion);
+    } else {
+      url.searchParams.delete("version");
+    }
+    window.history.replaceState({}, "", url.toString());
+  }, [selectedBetaVersion]);
 
   function toggleCategory(id: string) {
     setExpanded((prev) => {
@@ -120,9 +174,34 @@ export default function ImagesPage() {
       <h1 className="text-3xl font-bold mb-2">
         <span className="text-[var(--accent-gold)]">Images</span>
       </h1>
-      <p className="text-sm text-[var(--text-muted)] mb-8">
+      <p className="text-sm text-[var(--text-muted)] mb-4">
         Browse and download game assets. Click a category to view, or download as a zip pack.
       </p>
+
+      {/* Beta version picker — only renders when the backend exposes the
+          /api/images/beta/versions endpoint AND there's at least one
+          versioned ingest on disk. Categories prefixed with "Steam Beta"
+          re-fetch when this changes. */}
+      {betaVersions.length > 0 && (
+        <div className="flex items-center gap-2 mb-8 text-sm">
+          <label htmlFor="beta-version" className="text-[var(--text-muted)]">
+            Steam Beta version:
+          </label>
+          <select
+            id="beta-version"
+            value={selectedBetaVersion}
+            onChange={(e) => setSelectedBetaVersion(e.target.value)}
+            className="px-3 py-1.5 bg-[var(--bg-card)] border border-[var(--border-subtle)] rounded-md text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent-gold)]/50 cursor-pointer"
+          >
+            {betaVersions.map((v) => (
+              <option key={v} value={v}>{v}</option>
+            ))}
+          </select>
+          <span className="text-xs text-[var(--text-muted)]">
+            (only affects the "Steam Beta" categories below)
+          </span>
+        </div>
+      )}
 
       {loading ? (
         <div className="text-center py-12 text-[var(--text-muted)]">Loading...</div>
@@ -155,6 +234,7 @@ export default function ImagesPage() {
 
                   <DownloadSplitButton
                     categoryId={cat.id}
+                    betaVersion={selectedBetaVersion}
                     formats={
                       cat.formats ??
                       Array.from(
