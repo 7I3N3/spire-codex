@@ -20,9 +20,15 @@ def _available_beta_versions() -> list[str]:
     """All v* subdirs of static/images/beta/, sorted newest-first."""
     if not BETA_DIR.is_dir():
         return []
-    versions = [p.name for p in BETA_DIR.iterdir() if p.is_dir() and VERSION_RE.match(p.name)]
+    versions = [
+        p.name for p in BETA_DIR.iterdir() if p.is_dir() and VERSION_RE.match(p.name)
+    ]
     # Newest first so the dropdown defaults sensibly.
-    return sorted(versions, key=lambda v: [int(x) for x in v.lstrip("v").split("-")[0].split(".")], reverse=True)
+    return sorted(
+        versions,
+        key=lambda v: [int(x) for x in v.lstrip("v").split("-")[0].split(".")],
+        reverse=True,
+    )
 
 
 def _resolve_beta_version(version: str | None) -> str | None:
@@ -32,9 +38,13 @@ def _resolve_beta_version(version: str | None) -> str | None:
     """
     if version:
         if not VERSION_RE.match(version):
-            raise HTTPException(status_code=400, detail=f"Invalid version format: {version}")
+            raise HTTPException(
+                status_code=400, detail=f"Invalid version format: {version}"
+            )
         if not (BETA_DIR / version).is_dir():
-            raise HTTPException(status_code=404, detail=f"Beta version not found: {version}")
+            raise HTTPException(
+                status_code=404, detail=f"Beta version not found: {version}"
+            )
         return version
     latest = BETA_DIR / "latest"
     if latest.is_symlink():
@@ -43,6 +53,7 @@ def _resolve_beta_version(version: str | None) -> str | None:
     # Fallback: pick the highest version directory if `latest` symlink is missing.
     versions = _available_beta_versions()
     return versions[0] if versions else None
+
 
 # Category definitions: id -> (display name, path relative to images/, recursive)
 CATEGORIES: dict[str, tuple[str, str, bool, list[str] | None]] = {
@@ -176,7 +187,9 @@ EXCLUDED_SUBDIRS: dict[str, tuple[str, ...]] = {
 }
 
 
-def _get_images_for_category(category_id: str, version: str | None = None) -> list[dict[str, str]]:
+def _get_images_for_category(
+    category_id: str, version: str | None = None
+) -> list[dict[str, str]]:
     """Return list of image dicts for a category (all files on disk).
 
     Beta categories (id starts with `beta-`) are version-aware: the
@@ -194,7 +207,7 @@ def _get_images_for_category(category_id: str, version: str | None = None) -> li
     if category_id.startswith("beta-") and base_path.startswith("beta/"):
         if version is None:
             return []  # no beta versions on disk yet
-        rest = base_path[len("beta/"):]
+        rest = base_path[len("beta/") :]
         base_path = f"beta/{version}/{rest}"
 
     dir_path = IMAGES_DIR / base_path
@@ -375,7 +388,12 @@ def list_image_categories(request: Request, version: str | None = None):
 
 
 @router.get("/{category}/download", tags=["Images"])
-def download_category_zip(category: str, request: Request, format: str | None = None, version: str | None = None):
+def download_category_zip(
+    category: str,
+    request: Request,
+    format: str | None = None,
+    version: str | None = None,
+):
     """Download all images in a category as a zip file.
 
     Optional `?format=` query param filters to a single extension (e.g. `png`,
@@ -385,7 +403,9 @@ def download_category_zip(category: str, request: Request, format: str | None = 
     if category not in CATEGORIES:
         raise HTTPException(status_code=404, detail=f"Category '{category}' not found")
 
-    resolved_version = _resolve_beta_version(version) if category.startswith("beta-") else None
+    resolved_version = (
+        _resolve_beta_version(version) if category.startswith("beta-") else None
+    )
     images = _get_images_for_category(category, resolved_version)
     fmt = (format or "").lower().lstrip(".")
     if fmt:
