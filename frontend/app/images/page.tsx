@@ -198,7 +198,7 @@ export default function ImagesPage() {
             ))}
           </select>
           <span className="text-xs text-[var(--text-muted)]">
-            (only affects the "Steam Beta" categories below)
+            (only affects the &ldquo;Steam Beta&rdquo; categories below)
           </span>
         </div>
       )}
