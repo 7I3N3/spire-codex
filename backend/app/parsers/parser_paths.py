@@ -79,11 +79,15 @@ def resolve_image_url(entity_type: str, name_stem: str) -> str | None:
     """Build a version-aware image URL for an entity.
 
     Resolution order:
-      1. `data-beta/<BETA_VERSION>/images/<entity_type>/<name_stem>.png`
+      1. Per-version beta tree at `backend/static/images/beta/<BETA_VERSION>/<entity_type>/<name_stem>.png`
+         (populated by `tools/beta-watch/sync-images.sh`).
+         → `/static/images/beta/<BETA_VERSION>/<entity_type>/<name_stem>.webp`
+      2. Legacy beta layout `data-beta/<BETA_VERSION>/images/<entity_type>/<name_stem>.png`,
+         kept as a fallback while older versions still ship there.
          → `/static/data-beta/<BETA_VERSION>/images/<entity_type>/<name_stem>.webp`
-      2. Stable canonical: `backend/static/images/<entity_type>/<name_stem>.png`
+      3. Stable canonical: `backend/static/images/<entity_type>/<name_stem>.png`
          → `/static/images/<entity_type>/<name_stem>.webp`
-      3. None if neither exists.
+      4. None if none of the above exists.
 
     The on-disk check uses `.png` (the extracted source format we always
     have); the returned URL points at `.webp` (the served format) since
@@ -92,8 +96,14 @@ def resolve_image_url(entity_type: str, name_stem: str) -> str | None:
     `monsters`) — substring matches the on-disk layout exactly.
     """
     if BETA_VERSION:
-        beta_png = DATA_DIR / "images" / entity_type / f"{name_stem}.png"
-        if beta_png.exists():
+        per_version_png = (
+            STATIC_IMAGES_DIR / "beta" / BETA_VERSION / entity_type / f"{name_stem}.png"
+        )
+        if per_version_png.exists():
+            return f"/static/images/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
+
+        legacy_beta_png = DATA_DIR / "images" / entity_type / f"{name_stem}.png"
+        if legacy_beta_png.exists():
             return f"/static/data-beta/{BETA_VERSION}/images/{entity_type}/{name_stem}.webp"
 
     stable_png = STATIC_IMAGES_DIR / entity_type / f"{name_stem}.png"
