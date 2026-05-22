@@ -415,7 +415,7 @@
       ],
       "description": ""
     },
-    "image_url": "/static/images/monsters/battle_friend_v1.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/battle_friend_v1.webp",
     "beta_image_url": null
   },
   {
@@ -458,7 +458,7 @@
       ],
       "description": ""
     },
-    "image_url": "/static/images/monsters/battle_friend_v2.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/battle_friend_v2.webp",
     "beta_image_url": null
   },
   {
@@ -501,7 +501,7 @@
       ],
       "description": ""
     },
-    "image_url": "/static/images/monsters/battle_friend_v3.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/battle_friend_v3.webp",
     "beta_image_url": null
   },
   {
@@ -8379,7 +8379,7 @@
       ],
       "description": "砸击 → 光束 → 弹幕 → repeat"
     },
-    "image_url": "/static/images/monsters/the_adversary_placeholder.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/the_adversary_placeholder.webp",
     "beta_image_url": null
   },
   {
@@ -8464,7 +8464,7 @@
       ],
       "description": "冲击 → 火焰光束 → 弹幕 → repeat"
     },
-    "image_url": "/static/images/monsters/the_adversary_placeholder.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/the_adversary_placeholder.webp",
     "beta_image_url": null
   },
   {
@@ -8549,7 +8549,7 @@
       ],
       "description": "猛击 → 火焰光束 → 弹幕 → repeat"
     },
-    "image_url": "/static/images/monsters/the_adversary_placeholder.webp",
+    "image_url": "/static/images/beta/v0.106.0/monsters/the_adversary_placeholder.webp",
     "beta_image_url": null
   },
   {

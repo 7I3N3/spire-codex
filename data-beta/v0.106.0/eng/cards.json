@@ -44,7 +44,7 @@
     "upgrade": {
       "thornspower": "+2"
     },
-    "image_url": "/static/images/cards/abrasive.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/abrasive.webp",
     "beta_image_url": "/static/images/cards/beta/abrasive.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -85,7 +85,7 @@
     "upgrade": {
       "accelerant": "+1"
     },
-    "image_url": "/static/images/cards/accelerant.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/accelerant.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -132,7 +132,7 @@
     "upgrade": {
       "accuracypower": "+2"
     },
-    "image_url": "/static/images/cards/accuracy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/accuracy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -170,7 +170,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/acrobatics.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/acrobatics.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -210,7 +210,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/adaptive_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/adaptive_strike.webp",
     "beta_image_url": "/static/images/cards/beta/adaptive_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -251,7 +251,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/adrenaline.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/adrenaline.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -299,7 +299,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/afterimage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/afterimage.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -339,7 +339,7 @@
     "upgrade": {
       "summon": "+3"
     },
-    "image_url": "/static/images/cards/afterlife.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/afterlife.webp",
     "beta_image_url": "/static/images/cards/beta/afterlife.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -378,7 +378,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/aggression.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/aggression.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -416,7 +416,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/alchemize.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/alchemize.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -458,7 +458,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/alignment.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/alignment.webp",
     "beta_image_url": "/static/images/cards/beta/alignment.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -496,7 +496,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/all_for_one.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/all_for_one.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -534,7 +534,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/anger.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/anger.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -572,7 +572,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/anointed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/anointed.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -620,7 +620,7 @@
     "upgrade": {
       "dexterity": "+1"
     },
-    "image_url": "/static/images/cards/anticipate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/anticipate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -659,7 +659,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/apotheosis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/apotheosis.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -711,7 +711,7 @@
     "upgrade": {
       "remove_ethereal": true
     },
-    "image_url": "/static/images/cards/apparition.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/apparition.webp",
     "beta_image_url": "/static/images/cards/beta/apparition.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -753,7 +753,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/armaments.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/armaments.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -798,7 +798,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/arsenal.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/arsenal.webp",
     "beta_image_url": "/static/images/cards/beta/arsenal.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -836,7 +836,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/ascenders_bane.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ascenders_bane.webp",
     "beta_image_url": "/static/images/cards/beta/ascenders_bane.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -883,7 +883,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/ashen_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ashen_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -933,7 +933,7 @@
       "damage": "+3",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/assassinate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/assassinate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -976,7 +976,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/astral_pulse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/astral_pulse.webp",
     "beta_image_url": "/static/images/cards/beta/astral_pulse.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1014,7 +1014,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/automation.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/automation.webp",
     "beta_image_url": "/static/images/cards/beta/automation.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1052,7 +1052,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/begone.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/begone.webp",
     "beta_image_url": "/static/images/cards/beta/begone.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1091,7 +1091,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/backflip.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/backflip.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1132,7 +1132,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/backstab.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/backstab.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1175,7 +1175,7 @@
       "HpLoss": 13
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/bad_luck.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bad_luck.webp",
     "beta_image_url": "/static/images/cards/beta/bad_luck.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1217,7 +1217,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/ball_lightning.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ball_lightning.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1256,7 +1256,7 @@
     "upgrade": {
       "cost": 7
     },
-    "image_url": "/static/images/cards/banshees_cry.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/banshees_cry.webp",
     "beta_image_url": "/static/images/cards/beta/banshees_cry.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1296,7 +1296,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/barrage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/barrage.webp",
     "beta_image_url": "/static/images/cards/beta/barrage.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1332,7 +1332,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/barricade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/barricade.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1379,7 +1379,7 @@
       "damage": "+2",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/bash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1417,7 +1417,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/battle_trance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/battle_trance.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1453,7 +1453,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/beacon_of_hope.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/beacon_of_hope.webp",
     "beta_image_url": "/static/images/cards/beta/beacon_of_hope.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1500,7 +1500,7 @@
       "damage": "+1",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/beam_cell.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/beam_cell.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1538,7 +1538,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/beat_down.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/beat_down.webp",
     "beta_image_url": "/static/images/cards/beta/beat_down.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1580,7 +1580,7 @@
       "calculationbase": "+2",
       "calculationextra": "+2"
     },
-    "image_url": "/static/images/cards/beat_into_shape.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/beat_into_shape.webp",
     "beta_image_url": "/static/images/cards/beta/beat_into_shape.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1616,7 +1616,7 @@
       "HpLoss": 6
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/beckon.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/beckon.webp",
     "beta_image_url": "/static/images/cards/beta/beckon.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1654,7 +1654,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/believe_in_you.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/believe_in_you.webp",
     "beta_image_url": "/static/images/cards/beta/believe_in_you.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1706,7 +1706,7 @@
     "upgrade": {
       "focuspower": "+1"
     },
-    "image_url": "/static/images/cards/biased_cognition.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/biased_cognition.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1749,7 +1749,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/big_bang.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/big_bang.webp",
     "beta_image_url": "/static/images/cards/beta/big_bang.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1797,7 +1797,7 @@
     "upgrade": {
       "blackholepower": "+1"
     },
-    "image_url": "/static/images/cards/black_hole.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/black_hole.webp",
     "beta_image_url": "/static/images/cards/beta/black_hole.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1839,7 +1839,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/blade_dance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/blade_dance.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1882,7 +1882,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/blade_of_ink.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/blade_of_ink.webp",
     "beta_image_url": "/static/images/cards/beta/blade_of_ink.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1922,7 +1922,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/blight_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/blight_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -1961,7 +1961,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/blood_wall.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/blood_wall.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2000,7 +2000,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/bloodletting.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bloodletting.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2038,7 +2038,7 @@
     "upgrade": {
       "damage": "+10"
     },
-    "image_url": "/static/images/cards/bludgeon.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bludgeon.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2077,7 +2077,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/blur.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/blur.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2117,7 +2117,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/body_slam.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/body_slam.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2155,7 +2155,7 @@
     "upgrade": {
       "summon": "+2"
     },
-    "image_url": "/static/images/cards/bodyguard.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bodyguard.webp",
     "beta_image_url": "/static/images/cards/beta/bodyguard.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2193,7 +2193,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/bolas.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bolas.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2233,7 +2233,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/bombardment.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bombardment.webp",
     "beta_image_url": "/static/images/cards/beta/bombardment.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2279,7 +2279,7 @@
       "block": "+3",
       "ostydamage": "+3"
     },
-    "image_url": "/static/images/cards/bone_shards.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bone_shards.webp",
     "beta_image_url": "/static/images/cards/beta/bone_shards.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2319,7 +2319,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/boost_away.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/boost_away.webp",
     "beta_image_url": "/static/images/cards/beta/boost_away.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2360,7 +2360,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/boot_sequence.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/boot_sequence.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2403,7 +2403,7 @@
     "upgrade": {
       "energy": "+2"
     },
-    "image_url": "/static/images/cards/borrowed_time.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/borrowed_time.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2449,7 +2449,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/bouncing_flask.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bouncing_flask.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2495,7 +2495,7 @@
     "upgrade": {
       "strength": "+1"
     },
-    "image_url": "/static/images/cards/brand.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/brand.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2542,7 +2542,7 @@
       "damage": "+10",
       "vulnerable": "+2"
     },
-    "image_url": "/static/images/cards/break.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/break.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2581,7 +2581,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/breakthrough.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/breakthrough.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2622,7 +2622,7 @@
       "energy": "+1",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/brightest_flame.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/brightest_flame.webp",
     "beta_image_url": "/static/images/cards/beta/brightest_flame.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2667,7 +2667,7 @@
     "upgrade": {
       "poison": "+3"
     },
-    "image_url": "/static/images/cards/bubble_bubble.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bubble_bubble.webp",
     "beta_image_url": "/static/images/cards/beta/bubble_bubble.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2712,7 +2712,7 @@
     "upgrade": {
       "bufferpower": "+1"
     },
-    "image_url": "/static/images/cards/buffer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/buffer.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2766,7 +2766,7 @@
       "strength": "+1",
       "dexterity": "+1"
     },
-    "image_url": "/static/images/cards/bulk_up.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bulk_up.webp",
     "beta_image_url": "/static/images/cards/beta/bulk_up.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2802,7 +2802,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/bullet_time.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bullet_time.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2842,7 +2842,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/bully.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bully.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2882,7 +2882,7 @@
       "block": "+3",
       "forge": "+3"
     },
-    "image_url": "/static/images/cards/bulwark.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bulwark.webp",
     "beta_image_url": "/static/images/cards/beta/bulwark.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2922,7 +2922,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/bundle_of_joy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bundle_of_joy.webp",
     "beta_image_url": "/static/images/cards/beta/bundle_of_joy.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -2963,7 +2963,7 @@
       "Damage": 2
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/burn.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/burn.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3004,7 +3004,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/burning_pact.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/burning_pact.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3042,7 +3042,7 @@
     "upgrade": {
       "skills": "+1"
     },
-    "image_url": "/static/images/cards/burst.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/burst.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3080,7 +3080,7 @@
     "upgrade": {
       "damage": "+11"
     },
-    "image_url": "/static/images/cards/bury.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/bury.webp",
     "beta_image_url": "/static/images/cards/beta/bury.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3118,7 +3118,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/byrd_swoop.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/byrd_swoop.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3154,7 +3154,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/byrdonis_egg.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/byrdonis_egg.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3197,7 +3197,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/charge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/charge.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3233,7 +3233,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/calamity.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/calamity.webp",
     "beta_image_url": "/static/images/cards/beta/calamity.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3278,7 +3278,7 @@
     "upgrade": {
       "calcifypower": "+2"
     },
-    "image_url": "/static/images/cards/calcify.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/calcify.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3316,7 +3316,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/calculated_gamble.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/calculated_gamble.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3357,7 +3357,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/call_of_the_void.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/call_of_the_void.webp",
     "beta_image_url": "/static/images/cards/beta/call_of_the_void.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3402,7 +3402,7 @@
     "upgrade": {
       "thornspower": "+2"
     },
-    "image_url": "/static/images/cards/caltrops.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/caltrops.webp",
     "beta_image_url": "/static/images/cards/beta/caltrops.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3440,7 +3440,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/capacitor.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/capacitor.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3482,7 +3482,7 @@
       "damage": "+1",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/capture_spirit.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/capture_spirit.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3518,7 +3518,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/cascade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cascade.webp",
     "beta_image_url": "/static/images/cards/beta/cascade.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3556,7 +3556,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/catastrophe.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/catastrophe.webp",
     "beta_image_url": "/static/images/cards/beta/catastrophe.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3595,7 +3595,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/celestial_might.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/celestial_might.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3633,7 +3633,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/chaos.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/chaos.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3672,7 +3672,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/charge_battery.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/charge_battery.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3710,7 +3710,7 @@
     "upgrade": {
       "blockforstars": "+1"
     },
-    "image_url": "/static/images/cards/child_of_the_stars.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/child_of_the_stars.webp",
     "beta_image_url": "/static/images/cards/beta/child_of_the_stars.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3748,7 +3748,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/chill.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/chill.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3789,7 +3789,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/cinder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cinder.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3827,7 +3827,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/clash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/clash.webp",
     "beta_image_url": "/static/images/cards/beta/clash.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3867,7 +3867,7 @@
       "damage": "+1",
       "increase": "+1"
     },
-    "image_url": "/static/images/cards/claw.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/claw.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3905,7 +3905,7 @@
     "upgrade": {
       "summon": "+2"
     },
-    "image_url": "/static/images/cards/cleanse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cleanse.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3946,7 +3946,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/cloak_and_dagger.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cloak_and_dagger.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -3985,7 +3985,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/cloak_of_stars.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cloak_of_stars.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4022,7 +4022,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/clumsy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/clumsy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4064,7 +4064,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/cold_snap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cold_snap.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4104,7 +4104,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/collision_course.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/collision_course.webp",
     "beta_image_url": "/static/images/cards/beta/collision_course.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4143,7 +4143,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/colossus.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/colossus.webp",
     "beta_image_url": "/static/images/cards/beta/colossus.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4197,7 +4197,7 @@
     "upgrade": {
       "damage": "+11"
     },
-    "image_url": "/static/images/cards/comet.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/comet.webp",
     "beta_image_url": "/static/images/cards/beta/comet.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4237,7 +4237,7 @@
     "upgrade": {
       "block": "+1"
     },
-    "image_url": "/static/images/cards/compact.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/compact.webp",
     "beta_image_url": "/static/images/cards/beta/compact.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4277,7 +4277,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/compile_driver.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/compile_driver.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4316,7 +4316,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/conflagration.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/conflagration.webp",
     "beta_image_url": "/static/images/cards/beta/conflagration.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4354,7 +4354,7 @@
     "upgrade": {
       "forge": "+2"
     },
-    "image_url": "/static/images/cards/conqueror.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/conqueror.webp",
     "beta_image_url": "/static/images/cards/beta/conqueror.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4400,7 +4400,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/consuming_shadow.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/consuming_shadow.webp",
     "beta_image_url": "/static/images/cards/beta/consuming_shadow.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4439,7 +4439,7 @@
     "upgrade": {
       "stars": "+1"
     },
-    "image_url": "/static/images/cards/convergence.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/convergence.webp",
     "beta_image_url": "/static/images/cards/beta/convergence.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4484,7 +4484,7 @@
     "upgrade": {
       "coolantpower": "+1"
     },
-    "image_url": "/static/images/cards/coolant.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/coolant.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4522,7 +4522,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/coolheaded.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/coolheaded.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4567,7 +4567,7 @@
     "upgrade": {
       "strength": "+3"
     },
-    "image_url": "/static/images/cards/coordinate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/coordinate.webp",
     "beta_image_url": "/static/images/cards/beta/coordinate.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4605,7 +4605,7 @@
     "upgrade": {
       "corrosivewave": "+1"
     },
-    "image_url": "/static/images/cards/corrosive_wave.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/corrosive_wave.webp",
     "beta_image_url": "/static/images/cards/beta/corrosive_wave.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4643,7 +4643,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/corruption.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/corruption.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4681,7 +4681,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/cosmic_indifference.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cosmic_indifference.webp",
     "beta_image_url": "/static/images/cards/beta/cosmic_indifference.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4726,7 +4726,7 @@
     "upgrade": {
       "countdownpower": "+3"
     },
-    "image_url": "/static/images/cards/countdown.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/countdown.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4766,7 +4766,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/crash_landing.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/crash_landing.webp",
     "beta_image_url": "/static/images/cards/beta/crash_landing.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4804,7 +4804,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/creative_ai.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/creative_ai.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4845,7 +4845,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/crescent_spear.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/crescent_spear.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4890,7 +4890,7 @@
     "upgrade": {
       "crimsonmantlepower": "+2"
     },
-    "image_url": "/static/images/cards/crimson_mantle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/crimson_mantle.webp",
     "beta_image_url": "/static/images/cards/beta/crimson_mantle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4935,7 +4935,7 @@
     "upgrade": {
       "crueltypower": "+25"
     },
-    "image_url": "/static/images/cards/cruelty.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/cruelty.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -4975,7 +4975,7 @@
       "damage": "+1",
       "strengthloss": "+1"
     },
-    "image_url": "/static/images/cards/crush_under.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/crush_under.webp",
     "beta_image_url": "/static/images/cards/beta/crush_under.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5012,7 +5012,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/curse_of_the_bell.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/curse_of_the_bell.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5054,7 +5054,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/dagger_spray.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dagger_spray.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5092,7 +5092,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/dagger_throw.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dagger_throw.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5138,7 +5138,7 @@
     "upgrade": {
       "dansemacabrepower": "+2"
     },
-    "image_url": "/static/images/cards/danse_macabre.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/danse_macabre.webp",
     "beta_image_url": "/static/images/cards/beta/danse_macabre.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5174,7 +5174,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/dark_embrace.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dark_embrace.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5214,7 +5214,7 @@
     "upgrade": {
       "strengthloss": "+6"
     },
-    "image_url": "/static/images/cards/dark_shackles.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dark_shackles.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5253,7 +5253,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/darkness.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/darkness.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5293,7 +5293,7 @@
       "damage": "+3",
       "block": "+3"
     },
-    "image_url": "/static/images/cards/dash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5330,7 +5330,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/dazed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dazed.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5379,7 +5379,7 @@
     "upgrade": {
       "poison": "+2"
     },
-    "image_url": "/static/images/cards/deadly_poison.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/deadly_poison.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5420,7 +5420,7 @@
       "calculationbase": "+1",
       "extradamage": "+2"
     },
-    "image_url": "/static/images/cards/death_march.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/death_march.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5459,7 +5459,7 @@
     "upgrade": {
       "block": "+1"
     },
-    "image_url": "/static/images/cards/deaths_door.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/deaths_door.webp",
     "beta_image_url": "/static/images/cards/beta/deaths_door.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5511,7 +5511,7 @@
     "upgrade": {
       "doom": "+5"
     },
-    "image_url": "/static/images/cards/deathbringer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/deathbringer.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5558,7 +5558,7 @@
       "damage": "+2",
       "debilitatepower": "+1"
     },
-    "image_url": "/static/images/cards/debilitate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/debilitate.webp",
     "beta_image_url": "/static/images/cards/beta/debilitate.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5594,7 +5594,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/debris.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/debris.webp",
     "beta_image_url": "/static/images/cards/beta/debris.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5635,7 +5635,7 @@
       "Gold": 10
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/debt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/debt.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5676,7 +5676,7 @@
       "Damage": 2
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/decay.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/decay.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5721,7 +5721,7 @@
     "upgrade": {
       "cards": "+2"
     },
-    "image_url": "/static/images/cards/decisions_decisions.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/decisions_decisions.webp",
     "beta_image_url": "/static/images/cards/beta/decisions_decisions.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5764,7 +5764,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defend_ironclad.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defend_ironclad.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5804,7 +5804,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defend_silent.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defend_silent.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5844,7 +5844,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defend_regent.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defend_regent.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5884,7 +5884,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defend_necrobinder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defend_necrobinder.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5924,7 +5924,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defend_defect.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defend_defect.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -5964,7 +5964,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/defile.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defile.webp",
     "beta_image_url": "/static/images/cards/beta/defile.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6005,7 +6005,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/deflect.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/deflect.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6050,7 +6050,7 @@
     "upgrade": {
       "focuspower": "+1"
     },
-    "image_url": "/static/images/cards/defragment.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defragment.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6098,7 +6098,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/defy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/defy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6141,7 +6141,7 @@
       "block": "+2",
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/delay.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/delay.webp",
     "beta_image_url": "/static/images/cards/beta/delay.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6182,7 +6182,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/demesne.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/demesne.webp",
     "beta_image_url": "/static/images/cards/beta/demesne.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6230,7 +6230,7 @@
     "upgrade": {
       "strengthpower": "+1"
     },
-    "image_url": "/static/images/cards/demon_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/demon_form.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6272,7 +6272,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/demonic_shield.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/demonic_shield.webp",
     "beta_image_url": "/static/images/cards/beta/demonic_shield.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6314,7 +6314,7 @@
     "upgrade": {
       "damage": "+10"
     },
-    "image_url": "/static/images/cards/devastate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/devastate.webp",
     "beta_image_url": "/static/images/cards/beta/devastate.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6361,7 +6361,7 @@
     "upgrade": {
       "devourlifepower": "+1"
     },
-    "image_url": "/static/images/cards/devour_life.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/devour_life.webp",
     "beta_image_url": "/static/images/cards/beta/devour_life.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6403,7 +6403,7 @@
     "upgrade": {
       "summon": "+1"
     },
-    "image_url": "/static/images/cards/dirge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dirge.webp",
     "beta_image_url": "/static/images/cards/beta/dirge.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6444,7 +6444,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/discovery.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/discovery.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6490,7 +6490,7 @@
       "Disintegration": 6
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/disintegration.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/disintegration.webp",
     "beta_image_url": "/static/images/cards/beta/disintegration.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -6528,7 +6528,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/dismantle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dismantle.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6566,7 +6566,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/distraction.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/distraction.webp",
     "beta_image_url": "/static/images/cards/beta/distraction.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6607,7 +6607,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/dodge_and_roll.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dodge_and_roll.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6655,7 +6655,7 @@
     "upgrade": {
       "vulnerablepower": "+1"
     },
-    "image_url": "/static/images/cards/dominate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dominate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6696,7 +6696,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/double_energy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/double_energy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6744,7 +6744,7 @@
       "Weak": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/doubt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/doubt.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6787,7 +6787,7 @@
       "damage": "+2",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/drain_power.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/drain_power.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6828,7 +6828,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/dramatic_entrance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dramatic_entrance.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6872,7 +6872,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/dredge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dredge.webp",
     "beta_image_url": "/static/images/cards/beta/dredge.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6914,7 +6914,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/drum_of_battle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/drum_of_battle.webp",
     "beta_image_url": "/static/images/cards/beta/drum_of_battle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6952,7 +6952,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/dual_wield.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dual_wield.webp",
     "beta_image_url": "/static/images/cards/beta/dual_wield.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -6988,7 +6988,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/dualcast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dualcast.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7031,7 +7031,7 @@
       "damage": "+2",
       "strengthloss": "+2"
     },
-    "image_url": "/static/images/cards/dying_star.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/dying_star.webp",
     "beta_image_url": "/static/images/cards/beta/dying_star.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7074,7 +7074,7 @@
     "upgrade": {
       "remove_ethereal": true
     },
-    "image_url": "/static/images/cards/echo_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/echo_form.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7115,7 +7115,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/echoing_slash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/echoing_slash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7153,7 +7153,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/eidolon.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/eidolon.webp",
     "beta_image_url": "/static/images/cards/beta/eidolon.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7198,7 +7198,7 @@
     "upgrade": {
       "doom": "+8"
     },
-    "image_url": "/static/images/cards/end_of_days.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/end_of_days.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7238,7 +7238,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/energy_surge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/energy_surge.webp",
     "beta_image_url": "/static/images/cards/beta/energy_surge.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7281,7 +7281,7 @@
     "upgrade": {
       "strengthloss": "+3"
     },
-    "image_url": "/static/images/cards/enfeebling_touch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/enfeebling_touch.webp",
     "beta_image_url": "/static/images/cards/beta/enfeebling_touch.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7322,7 +7322,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/enlightenment.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/enlightenment.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7361,7 +7361,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/enthralled.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/enthralled.webp",
     "beta_image_url": "/static/images/cards/beta/enthralled.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7400,7 +7400,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/entrench.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/entrench.webp",
     "beta_image_url": "/static/images/cards/beta/entrench.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7438,7 +7438,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/entropy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/entropy.webp",
     "beta_image_url": "/static/images/cards/beta/entropy.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7483,7 +7483,7 @@
     "upgrade": {
       "envenompower": "+1"
     },
-    "image_url": "/static/images/cards/envenom.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/envenom.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7522,7 +7522,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/equilibrium.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/equilibrium.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7562,7 +7562,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/eradicate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/eradicate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7603,7 +7603,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/escape_plan.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/escape_plan.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7648,7 +7648,7 @@
     "upgrade": {
       "platingpower": "+3"
     },
-    "image_url": "/static/images/cards/eternal_armor.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/eternal_armor.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7686,7 +7686,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/evil_eye.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/evil_eye.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7726,7 +7726,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/expect_a_fight.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/expect_a_fight.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7764,7 +7764,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/expertise.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/expertise.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7804,7 +7804,7 @@
     "upgrade": {
       "power": "+1"
     },
-    "image_url": "/static/images/cards/expose.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/expose.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7846,7 +7846,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/exterminate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/exterminate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7887,7 +7887,7 @@
       "damage": "+1",
       "playmax": "+1"
     },
-    "image_url": "/static/images/cards/ftl.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ftl.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7941,7 +7941,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/falling_star.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/falling_star.webp",
     "beta_image_url": "/static/images/cards/beta/falling_star.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -7981,7 +7981,7 @@
     "upgrade": {
       "shivs": "+1"
     },
-    "image_url": "/static/images/cards/fan_of_knives.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fan_of_knives.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8021,7 +8021,7 @@
     "upgrade": {
       "extrablock": "+2"
     },
-    "image_url": "/static/images/cards/fasten.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fasten.webp",
     "beta_image_url": "/static/images/cards/beta/fasten.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8070,7 +8070,7 @@
       "damage": "+1",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/fear.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fear.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8115,7 +8115,7 @@
       "damage": "+2",
       "maxhp": "+1"
     },
-    "image_url": "/static/images/cards/feed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/feed.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -8163,7 +8163,7 @@
     "upgrade": {
       "strength": "+2"
     },
-    "image_url": "/static/images/cards/feeding_frenzy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/feeding_frenzy.webp",
     "beta_image_url": "/static/images/cards/beta/feeding_frenzy.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8201,7 +8201,7 @@
     "upgrade": {
       "power": "+1"
     },
-    "image_url": "/static/images/cards/feel_no_pain.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/feel_no_pain.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8246,7 +8246,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/feral.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/feral.webp",
     "beta_image_url": "/static/images/cards/beta/feral.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8288,7 +8288,7 @@
     "upgrade": {
       "ostydamage": "+3"
     },
-    "image_url": "/static/images/cards/fetch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fetch.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8328,7 +8328,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/fiend_fire.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fiend_fire.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8380,7 +8380,7 @@
       "damage": "+1",
       "strength": "+1"
     },
-    "image_url": "/static/images/cards/fight_me.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fight_me.webp",
     "beta_image_url": "/static/images/cards/beta/fight_me.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8420,7 +8420,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/fight_through.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fight_through.webp",
     "beta_image_url": "/static/images/cards/beta/fight_through.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8459,7 +8459,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/finesse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/finesse.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8499,7 +8499,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/finisher.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/finisher.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8537,7 +8537,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/fisticuffs.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fisticuffs.webp",
     "beta_image_url": "/static/images/cards/beta/fisticuffs.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8577,7 +8577,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/flak_cannon.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flak_cannon.webp",
     "beta_image_url": "/static/images/cards/beta/flak_cannon.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8617,7 +8617,7 @@
       "block": "+4",
       "damageback": "+2"
     },
-    "image_url": "/static/images/cards/flame_barrier.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flame_barrier.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8653,7 +8653,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/flanking.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flanking.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8692,7 +8692,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/flash_of_steel.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flash_of_steel.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8733,7 +8733,7 @@
     "upgrade": {
       "ostydamage": "+4"
     },
-    "image_url": "/static/images/cards/flatten.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flatten.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8773,7 +8773,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/flechettes.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flechettes.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8813,7 +8813,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/flick_flack.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/flick_flack.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8865,7 +8865,7 @@
       "damage": "+2",
       "focuspower": "+1"
     },
-    "image_url": "/static/images/cards/focused_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/focused_strike.webp",
     "beta_image_url": "/static/images/cards/beta/focused_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8904,7 +8904,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/folly.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/folly.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8955,7 +8955,7 @@
     "upgrade": {
       "dexterity": "+1"
     },
-    "image_url": "/static/images/cards/footwork.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/footwork.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -8993,7 +8993,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/forbidden_grimoire.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/forbidden_grimoire.webp",
     "beta_image_url": "/static/images/cards/beta/forbidden_grimoire.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9034,7 +9034,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/foregone_conclusion.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/foregone_conclusion.webp",
     "beta_image_url": "/static/images/cards/beta/foregone_conclusion.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9074,7 +9074,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/forgotten_ritual.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/forgotten_ritual.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9111,7 +9111,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/frantic_escape.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/frantic_escape.webp",
     "beta_image_url": "/static/images/cards/beta/frantic_escape.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -9157,7 +9157,7 @@
     "upgrade": {
       "strengthpower": "-1"
     },
-    "image_url": "/static/images/cards/friendship.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/friendship.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9198,7 +9198,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/fuel.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fuel.webp",
     "beta_image_url": "/static/images/cards/beta/fuel.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9239,7 +9239,7 @@
     "upgrade": {
       "forge": "+2"
     },
-    "image_url": "/static/images/cards/furnace.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/furnace.webp",
     "beta_image_url": "/static/images/cards/beta/furnace.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9277,7 +9277,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/fusion.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/fusion.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9320,7 +9320,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/guards.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/guards.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9377,7 +9377,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/gamma_blast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/gamma_blast.webp",
     "beta_image_url": "/static/images/cards/beta/gamma_blast.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9417,7 +9417,7 @@
     "upgrade": {
       "extradamage": "+2"
     },
-    "image_url": "/static/images/cards/gang_up.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/gang_up.webp",
     "beta_image_url": "/static/images/cards/beta/gang_up.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9456,7 +9456,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/gather_light.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/gather_light.webp",
     "beta_image_url": "/static/images/cards/beta/gather_light.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9494,7 +9494,7 @@
     "upgrade": {
       "starsperturn": "+1"
     },
-    "image_url": "/static/images/cards/genesis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/genesis.webp",
     "beta_image_url": "/static/images/cards/beta/genesis.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9535,7 +9535,7 @@
     "upgrade": {
       "increase": "+1"
     },
-    "image_url": "/static/images/cards/genetic_algorithm.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/genetic_algorithm.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9576,7 +9576,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/giant_rock.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/giant_rock.webp",
     "beta_image_url": "/static/images/cards/beta/giant_rock.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9614,7 +9614,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/glacier.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glacier.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9652,7 +9652,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/glasswork.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glasswork.webp",
     "beta_image_url": "/static/images/cards/beta/glasswork.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9691,7 +9691,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/glimmer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glimmer.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9733,7 +9733,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/glimpse_beyond.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glimpse_beyond.webp",
     "beta_image_url": "/static/images/cards/beta/glimpse_beyond.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9776,7 +9776,7 @@
       "block": "+2",
       "blocknextturn": "+2"
     },
-    "image_url": "/static/images/cards/glitterstream.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glitterstream.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9815,7 +9815,7 @@
     "upgrade": {
       "stars": "+1"
     },
-    "image_url": "/static/images/cards/glow.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/glow.webp",
     "beta_image_url": "/static/images/cards/beta/glow.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9862,7 +9862,7 @@
       "damage": "+1",
       "weak": "+1"
     },
-    "image_url": "/static/images/cards/go_for_the_eyes.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/go_for_the_eyes.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9902,7 +9902,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/gold_axe.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/gold_axe.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9940,7 +9940,7 @@
     "upgrade": {
       "damage": "+15"
     },
-    "image_url": "/static/images/cards/grand_finale.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/grand_finale.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -9981,7 +9981,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/grave_warden.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/grave_warden.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10022,7 +10022,7 @@
       "damage": "+2",
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/graveblast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/graveblast.webp",
     "beta_image_url": "/static/images/cards/beta/graveblast.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10062,7 +10062,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/greed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/greed.webp",
     "beta_image_url": "/static/images/cards/beta/greed.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10107,7 +10107,7 @@
       "damage": "+1",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/guiding_star.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/guiding_star.webp",
     "beta_image_url": "/static/images/cards/beta/guiding_star.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10145,7 +10145,7 @@
       "Combats": 5
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/guilty.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/guilty.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10189,7 +10189,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/gunk_up.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/gunk_up.webp",
     "beta_image_url": "/static/images/cards/beta/gunk_up.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10234,7 +10234,7 @@
     "upgrade": {
       "hailstormpower": "+2"
     },
-    "image_url": "/static/images/cards/hailstorm.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hailstorm.webp",
     "beta_image_url": "/static/images/cards/beta/hailstorm.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10270,7 +10270,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/hammer_time.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hammer_time.webp",
     "beta_image_url": "/static/images/cards/beta/hammer_time.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10308,7 +10308,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/hand_trick.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hand_trick.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10348,7 +10348,7 @@
       "damage": "+5",
       "gold": "+5"
     },
-    "image_url": "/static/images/cards/hand_of_greed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hand_of_greed.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -10386,7 +10386,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/hang.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hang.webp",
     "beta_image_url": "/static/images/cards/beta/hang.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10426,7 +10426,7 @@
     "upgrade": {
       "hploss": "+2"
     },
-    "image_url": "/static/images/cards/haunt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/haunt.webp",
     "beta_image_url": "/static/images/cards/beta/haunt.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10462,7 +10462,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/havoc.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/havoc.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10509,7 +10509,7 @@
     "upgrade": {
       "poison": "+2"
     },
-    "image_url": "/static/images/cards/haze.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/haze.webp",
     "beta_image_url": "/static/images/cards/beta/haze.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10550,7 +10550,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/headbutt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/headbutt.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10589,7 +10589,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/heavenly_drill.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/heavenly_drill.webp",
     "beta_image_url": "/static/images/cards/beta/heavenly_drill.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10629,7 +10629,7 @@
       "damage": "+3",
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/hegemony.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hegemony.webp",
     "beta_image_url": "/static/images/cards/beta/hegemony.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10668,7 +10668,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/heirloom_hammer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/heirloom_hammer.webp",
     "beta_image_url": "/static/images/cards/beta/heirloom_hammer.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10708,7 +10708,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/helix_drill.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/helix_drill.webp",
     "beta_image_url": "/static/images/cards/beta/helix_drill.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10744,7 +10744,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/hello_world.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hello_world.webp",
     "beta_image_url": "/static/images/cards/beta/hello_world.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10780,7 +10780,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/hellraiser.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hellraiser.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10819,7 +10819,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/hemokinesis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hemokinesis.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10865,7 +10865,7 @@
     "upgrade": {
       "starnextturnpower": "+1"
     },
-    "image_url": "/static/images/cards/hidden_cache.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hidden_cache.webp",
     "beta_image_url": "/static/images/cards/beta/hidden_cache.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10906,7 +10906,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/hidden_daggers.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hidden_daggers.webp",
     "beta_image_url": "/static/images/cards/beta/hidden_daggers.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -10944,7 +10944,7 @@
     "upgrade": {
       "replay": "+1"
     },
-    "image_url": "/static/images/cards/hidden_gem.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hidden_gem.webp",
     "beta_image_url": "/static/images/cards/beta/hidden_gem.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -10994,7 +10994,7 @@
       "ostydamage": "+2",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/high_five.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/high_five.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11035,7 +11035,7 @@
       "block": "+2",
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/hologram.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hologram.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11085,7 +11085,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/hotfix.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hotfix.webp",
     "beta_image_url": "/static/images/cards/beta/hotfix.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11126,7 +11126,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/howl_from_beyond.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/howl_from_beyond.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11166,7 +11166,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/huddle_up.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/huddle_up.webp",
     "beta_image_url": "/static/images/cards/beta/huddle_up.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11215,7 +11215,7 @@
     "upgrade": {
       "damage": "+8"
     },
-    "image_url": "/static/images/cards/hyperbeam.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/hyperbeam.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11253,7 +11253,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/i_am_invincible.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/i_am_invincible.webp",
     "beta_image_url": "/static/images/cards/beta/i_am_invincible.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11292,7 +11292,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/ice_lance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ice_lance.webp",
     "beta_image_url": "/static/images/cards/beta/ice_lance.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11330,7 +11330,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/ignition.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ignition.webp",
     "beta_image_url": "/static/images/cards/beta/ignition.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11371,7 +11371,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/impatience.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/impatience.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11411,7 +11411,7 @@
     "upgrade": {
       "block": "+10"
     },
-    "image_url": "/static/images/cards/impervious.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/impervious.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11452,7 +11452,7 @@
       "Damage": 3
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/infection.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/infection.webp",
     "beta_image_url": "/static/images/cards/beta/infection.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11493,7 +11493,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/infernal_blade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/infernal_blade.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11541,7 +11541,7 @@
     "upgrade": {
       "infernopower": "+3"
     },
-    "image_url": "/static/images/cards/inferno.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/inferno.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11579,7 +11579,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/infinite_blades.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/infinite_blades.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11624,7 +11624,7 @@
     "upgrade": {
       "strengthpower": "+1"
     },
-    "image_url": "/static/images/cards/inflame.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/inflame.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11660,7 +11660,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/injury.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/injury.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11701,7 +11701,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/intercept.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/intercept.webp",
     "beta_image_url": "/static/images/cards/beta/intercept.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11741,7 +11741,7 @@
       "summon": "+1",
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/invoke.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/invoke.webp",
     "beta_image_url": "/static/images/cards/beta/invoke.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11781,7 +11781,7 @@
       "damage": "+2",
       "block": "+2"
     },
-    "image_url": "/static/images/cards/iron_wave.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/iron_wave.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11826,7 +11826,7 @@
     "upgrade": {
       "iterationpower": "+1"
     },
-    "image_url": "/static/images/cards/iteration.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/iteration.webp",
     "beta_image_url": "/static/images/cards/beta/iteration.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11866,7 +11866,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/jack_of_all_trades.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/jack_of_all_trades.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11908,7 +11908,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/jackpot.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/jackpot.webp",
     "beta_image_url": "/static/images/cards/beta/jackpot.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11953,7 +11953,7 @@
     "upgrade": {
       "juggernautpower": "+2"
     },
-    "image_url": "/static/images/cards/juggernaut.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/juggernaut.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -11989,7 +11989,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/juggling.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/juggling.webp",
     "beta_image_url": "/static/images/cards/beta/juggling.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12027,7 +12027,7 @@
     "upgrade": {
       "damage": "+8"
     },
-    "image_url": "/static/images/cards/kingly_kick.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/kingly_kick.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12067,7 +12067,7 @@
       "damage": "+2",
       "increase": "+2"
     },
-    "image_url": "/static/images/cards/kingly_punch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/kingly_punch.webp",
     "beta_image_url": "/static/images/cards/beta/kingly_punch.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12110,7 +12110,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/knife_trap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/knife_trap.webp",
     "beta_image_url": "/static/images/cards/beta/knife_trap.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12157,7 +12157,7 @@
       "damage": "+4",
       "knockdownpower": "+1"
     },
-    "image_url": "/static/images/cards/knockdown.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/knockdown.webp",
     "beta_image_url": "/static/images/cards/beta/knockdown.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12196,7 +12196,7 @@
     "upgrade": {
       "damage": "+8"
     },
-    "image_url": "/static/images/cards/knockout_blow.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/knockout_blow.webp",
     "beta_image_url": "/static/images/cards/beta/knockout_blow.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12250,7 +12250,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/know_thy_place.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/know_thy_place.webp",
     "beta_image_url": "/static/images/cards/beta/know_thy_place.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12291,7 +12291,7 @@
       "gloryActIndex": 2
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/lantern_key.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/lantern_key.webp",
     "beta_image_url": "/static/images/cards/beta/lantern_key.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12330,7 +12330,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/largesse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/largesse.webp",
     "beta_image_url": "/static/images/cards/beta/largesse.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12373,7 +12373,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/leading_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/leading_strike.webp",
     "beta_image_url": "/static/images/cards/beta/leading_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12411,7 +12411,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/leap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/leap.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12458,7 +12458,7 @@
       "block": "+3",
       "weak": "+1"
     },
-    "image_url": "/static/images/cards/leg_sweep.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/leg_sweep.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12498,7 +12498,7 @@
     "upgrade": {
       "summon": "+2"
     },
-    "image_url": "/static/images/cards/legion_of_bone.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/legion_of_bone.webp",
     "beta_image_url": "/static/images/cards/beta/legion_of_bone.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12548,7 +12548,7 @@
     "upgrade": {
       "lethalitypower": "+25"
     },
-    "image_url": "/static/images/cards/lethality.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/lethality.webp",
     "beta_image_url": "/static/images/cards/beta/lethality.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12589,7 +12589,7 @@
     "upgrade": {
       "block": "+5"
     },
-    "image_url": "/static/images/cards/lift.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/lift.webp",
     "beta_image_url": "/static/images/cards/beta/lift.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12635,7 +12635,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/lightning_rod.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/lightning_rod.webp",
     "beta_image_url": "/static/images/cards/beta/lightning_rod.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12673,7 +12673,7 @@
     "upgrade": {
       "loop": "+1"
     },
-    "image_url": "/static/images/cards/loop.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/loop.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12714,7 +12714,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/luminesce.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/luminesce.webp",
     "beta_image_url": "/static/images/cards/beta/luminesce.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12758,7 +12758,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/lunar_blast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/lunar_blast.webp",
     "beta_image_url": "/static/images/cards/beta/lunar_blast.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12796,7 +12796,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/machine_learning.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/machine_learning.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12844,14 +12844,14 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/mad_science_attack.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mad_science_attack.webp",
     "beta_image_url": null,
     "type_variants": {
       "attack": {
         "type": "Attack",
         "description": "Deal 12 damage.",
         "damage": 12,
-        "image_url": "/static/images/cards/mad_science_attack.webp",
+        "image_url": "/static/images/beta/v0.106.0/cards/mad_science_attack.webp",
         "riders": [
           {
             "id": "SAPPING",
@@ -12874,7 +12874,7 @@
         "type": "Skill",
         "description": "Gain 8 [gold]Block[/gold].",
         "block": 8,
-        "image_url": "/static/images/cards/mad_science_skill.webp",
+        "image_url": "/static/images/beta/v0.106.0/cards/mad_science_skill.webp",
         "riders": [
           {
             "id": "ENERGIZED",
@@ -12896,7 +12896,7 @@
       "power": {
         "type": "Power",
         "description": "",
-        "image_url": "/static/images/cards/mad_science_power.webp",
+        "image_url": "/static/images/beta/v0.106.0/cards/mad_science_power.webp",
         "riders": [
           {
             "id": "EXPERTISE",
@@ -12952,7 +12952,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/make_it_so.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/make_it_so.webp",
     "beta_image_url": "/static/images/cards/beta/make_it_so.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -12990,7 +12990,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/malaise.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/malaise.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13033,7 +13033,7 @@
       "damage": "+5",
       "strengthloss": "+5"
     },
-    "image_url": "/static/images/cards/mangle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mangle.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13071,7 +13071,7 @@
     "upgrade": {
       "block": "+1"
     },
-    "image_url": "/static/images/cards/manifest_authority.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/manifest_authority.webp",
     "beta_image_url": "/static/images/cards/beta/manifest_authority.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13107,7 +13107,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/master_planner.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/master_planner.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13147,7 +13147,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/master_of_strategy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/master_of_strategy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13190,7 +13190,7 @@
       "damage": "+1",
       "increase": "+1"
     },
-    "image_url": "/static/images/cards/maul.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/maul.webp",
     "beta_image_url": "/static/images/cards/beta/maul.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13226,7 +13226,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/mayhem.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mayhem.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13265,7 +13265,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/melancholy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/melancholy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13306,7 +13306,7 @@
       "calculationbase": "+2",
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/memento_mori.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/memento_mori.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13346,7 +13346,7 @@
     "upgrade": {
       "cards": "+2"
     },
-    "image_url": "/static/images/cards/metamorphosis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/metamorphosis.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13403,7 +13403,7 @@
     "upgrade": {
       "damage": "+7"
     },
-    "image_url": "/static/images/cards/meteor_shower.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/meteor_shower.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13443,7 +13443,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/meteor_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/meteor_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13484,7 +13484,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/mimic.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mimic.webp",
     "beta_image_url": "/static/images/cards/beta/mimic.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13529,7 +13529,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/mind_blast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mind_blast.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13575,7 +13575,7 @@
       "MindRot": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/mind_rot.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mind_rot.webp",
     "beta_image_url": "/static/images/cards/beta/mind_rot.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -13617,7 +13617,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/minion_dive_bomb.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/minion_dive_bomb.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13662,7 +13662,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/minion_sacrifice.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/minion_sacrifice.webp",
     "beta_image_url": "/static/images/cards/beta/minion_sacrifice.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13709,7 +13709,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/minion_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/minion_strike.webp",
     "beta_image_url": "/static/images/cards/beta/minion_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13753,7 +13753,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/mirage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/mirage.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13795,7 +13795,7 @@
       "damage": "+2",
       "add_retain": true
     },
-    "image_url": "/static/images/cards/misery.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/misery.webp",
     "beta_image_url": "/static/images/cards/beta/misery.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13834,7 +13834,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/modded.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/modded.webp",
     "beta_image_url": "/static/images/cards/beta/modded.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13874,7 +13874,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/molten_fist.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/molten_fist.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13917,7 +13917,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/momentum_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/momentum_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13955,7 +13955,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/monarchs_gaze.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/monarchs_gaze.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -13993,7 +13993,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/monologue.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/monologue.webp",
     "beta_image_url": "/static/images/cards/beta/monologue.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14029,7 +14029,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/multi_cast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/multi_cast.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14069,7 +14069,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/murder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/murder.webp",
     "beta_image_url": "/static/images/cards/beta/murder.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14107,7 +14107,7 @@
     "upgrade": {
       "summon": "+3"
     },
-    "image_url": "/static/images/cards/necro_mastery.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/necro_mastery.webp",
     "beta_image_url": "/static/images/cards/beta/necro_mastery.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14154,7 +14154,7 @@
       "block": "+1",
       "doom": "+4"
     },
-    "image_url": "/static/images/cards/negative_pulse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/negative_pulse.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14196,7 +14196,7 @@
       "damage": "+4",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/neows_fury.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/neows_fury.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -14246,7 +14246,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/neurosurge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/neurosurge.webp",
     "beta_image_url": "/static/images/cards/beta/neurosurge.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14293,7 +14293,7 @@
       "damage": "+1",
       "weak": "+1"
     },
-    "image_url": "/static/images/cards/neutralize.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/neutralize.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14339,7 +14339,7 @@
     "upgrade": {
       "platingpower": "+3"
     },
-    "image_url": "/static/images/cards/neutron_aegis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/neutron_aegis.webp",
     "beta_image_url": "/static/images/cards/beta/neutron_aegis.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14377,7 +14377,7 @@
     "upgrade": {
       "cost": 2
     },
-    "image_url": "/static/images/cards/nightmare.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/nightmare.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14420,7 +14420,7 @@
     "upgrade": {
       "calculationbase": "+5"
     },
-    "image_url": "/static/images/cards/no_escape.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/no_escape.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14459,7 +14459,7 @@
       "numOfCardsPerTurn": 3
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/normality.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/normality.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14498,7 +14498,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/nostalgia.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/nostalgia.webp",
     "beta_image_url": "/static/images/cards/beta/nostalgia.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14538,7 +14538,7 @@
     "upgrade": {
       "heal": "+3"
     },
-    "image_url": "/static/images/cards/not_yet.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/not_yet.webp",
     "beta_image_url": "/static/images/cards/beta/not_yet.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -14579,7 +14579,7 @@
     "upgrade": {
       "poisonperturn": "+1"
     },
-    "image_url": "/static/images/cards/noxious_fumes.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/noxious_fumes.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14626,7 +14626,7 @@
       "damage": "+3",
       "weak": "+1"
     },
-    "image_url": "/static/images/cards/null.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/null.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14671,7 +14671,7 @@
     "upgrade": {
       "doom": "+1"
     },
-    "image_url": "/static/images/cards/oblivion.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/oblivion.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14713,7 +14713,7 @@
     "upgrade": {
       "cards": "+2"
     },
-    "image_url": "/static/images/cards/offering.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/offering.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14754,7 +14754,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/omnislice.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/omnislice.webp",
     "beta_image_url": "/static/images/cards/beta/omnislice.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14792,7 +14792,7 @@
     "upgrade": {
       "attacks": "+1"
     },
-    "image_url": "/static/images/cards/one_two_punch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/one_two_punch.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14830,7 +14830,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/orbit.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/orbit.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14876,7 +14876,7 @@
     "upgrade": {
       "outbreakpower": "+4"
     },
-    "image_url": "/static/images/cards/outbreak.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/outbreak.webp",
     "beta_image_url": "/static/images/cards/beta/outbreak.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14914,7 +14914,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/outmaneuver.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/outmaneuver.webp",
     "beta_image_url": "/static/images/cards/beta/outmaneuver.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14954,7 +14954,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/overclock.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/overclock.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -14993,7 +14993,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/pacts_end.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pacts_end.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15031,7 +15031,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/pagestorm.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pagestorm.webp",
     "beta_image_url": "/static/images/cards/beta/pagestorm.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15070,7 +15070,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/pale_blue_dot.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pale_blue_dot.webp",
     "beta_image_url": "/static/images/cards/beta/pale_blue_dot.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15108,7 +15108,7 @@
     "upgrade": {
       "panachedamage": "+4"
     },
-    "image_url": "/static/images/cards/panache.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/panache.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15149,7 +15149,7 @@
     "upgrade": {
       "block": "+10"
     },
-    "image_url": "/static/images/cards/panic_button.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/panic_button.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15199,7 +15199,7 @@
     "upgrade": {
       "parrypower": "+4"
     },
-    "image_url": "/static/images/cards/parry.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/parry.webp",
     "beta_image_url": "/static/images/cards/beta/parry.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15239,7 +15239,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/parse.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/parse.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15281,7 +15281,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/particle_wall.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/particle_wall.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15328,7 +15328,7 @@
       "block": "+2",
       "vigorpower": "+1"
     },
-    "image_url": "/static/images/cards/patter.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/patter.webp",
     "beta_image_url": "/static/images/cards/beta/patter.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15367,7 +15367,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/peck.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/peck.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15409,7 +15409,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/perfected_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/perfected_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15456,7 +15456,7 @@
     "upgrade": {
       "phantombladespower": "+3"
     },
-    "image_url": "/static/images/cards/phantom_blades.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/phantom_blades.webp",
     "beta_image_url": "/static/images/cards/beta/phantom_blades.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15497,7 +15497,7 @@
       "damage": "+3",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/photon_cut.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/photon_cut.webp",
     "beta_image_url": "/static/images/cards/beta/photon_cut.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15537,7 +15537,7 @@
     "upgrade": {
       "strengthloss": "+2"
     },
-    "image_url": "/static/images/cards/piercing_wail.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/piercing_wail.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15578,7 +15578,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/pillage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pillage.webp",
     "beta_image_url": "/static/images/cards/beta/pillage.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15616,7 +15616,7 @@
     "upgrade": {
       "block": "+1"
     },
-    "image_url": "/static/images/cards/pillar_of_creation.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pillar_of_creation.webp",
     "beta_image_url": "/static/images/cards/beta/pillar_of_creation.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15654,7 +15654,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/pinpoint.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pinpoint.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15701,7 +15701,7 @@
       "damage": "+2",
       "poison": "+1"
     },
-    "image_url": "/static/images/cards/poisoned_stab.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/poisoned_stab.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15742,7 +15742,7 @@
     "upgrade": {
       "ostydamage": "+3"
     },
-    "image_url": "/static/images/cards/poke.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/poke.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15784,7 +15784,7 @@
       "damage": "+1",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/pommel_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pommel_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15821,7 +15821,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/poor_sleep.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/poor_sleep.webp",
     "beta_image_url": "/static/images/cards/beta/poor_sleep.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15863,7 +15863,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/pounce.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pounce.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15903,7 +15903,7 @@
     "upgrade": {
       "calculationbase": "+3"
     },
-    "image_url": "/static/images/cards/precise_cut.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/precise_cut.webp",
     "beta_image_url": "/static/images/cards/beta/precise_cut.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15941,7 +15941,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/predator.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/predator.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -15986,7 +15986,7 @@
     "upgrade": {
       "preptimepower": "+2"
     },
-    "image_url": "/static/images/cards/prep_time.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/prep_time.webp",
     "beta_image_url": "/static/images/cards/beta/prep_time.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16024,7 +16024,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/prepared.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/prepared.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16062,7 +16062,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/primal_force.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/primal_force.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16102,7 +16102,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/production.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/production.webp",
     "beta_image_url": "/static/images/cards/beta/production.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16143,7 +16143,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/prolong.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/prolong.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16184,7 +16184,7 @@
     "upgrade": {
       "cards": "+3"
     },
-    "image_url": "/static/images/cards/prophesize.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/prophesize.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16227,7 +16227,7 @@
       "cost": 0,
       "calculationbase": "+5"
     },
-    "image_url": "/static/images/cards/protector.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/protector.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16280,7 +16280,7 @@
       "dexterity": "+1",
       "strength": "+1"
     },
-    "image_url": "/static/images/cards/prowess.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/prowess.webp",
     "beta_image_url": "/static/images/cards/beta/prowess.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16320,7 +16320,7 @@
       "block": "+2",
       "summon": "+1"
     },
-    "image_url": "/static/images/cards/pull_aggro.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pull_aggro.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16360,7 +16360,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/pull_from_below.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pull_from_below.webp",
     "beta_image_url": "/static/images/cards/beta/pull_from_below.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16401,7 +16401,7 @@
     "upgrade": {
       "cards": "+2"
     },
-    "image_url": "/static/images/cards/purity.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/purity.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16445,7 +16445,7 @@
     "upgrade": {
       "power": "+1"
     },
-    "image_url": "/static/images/cards/putrefy.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/putrefy.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16486,7 +16486,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/pyre.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/pyre.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16524,7 +16524,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/quadcast.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/quadcast.webp",
     "beta_image_url": "/static/images/cards/beta/quadcast.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16562,7 +16562,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/quasar.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/quasar.webp",
     "beta_image_url": "/static/images/cards/beta/quasar.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16603,7 +16603,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/radiate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/radiate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16641,7 +16641,7 @@
     "upgrade": {
       "power": "+2"
     },
-    "image_url": "/static/images/cards/rage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rage.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16679,7 +16679,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/rainbow.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rainbow.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16720,7 +16720,7 @@
     "upgrade": {
       "block": "+5"
     },
-    "image_url": "/static/images/cards/rally.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rally.webp",
     "beta_image_url": "/static/images/cards/beta/rally.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16759,7 +16759,7 @@
     "upgrade": {
       "increase": "+4"
     },
-    "image_url": "/static/images/cards/rampage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rampage.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16802,7 +16802,7 @@
     "upgrade": {
       "ostydamage": "+2"
     },
-    "image_url": "/static/images/cards/rattle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rattle.webp",
     "beta_image_url": "/static/images/cards/beta/rattle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16842,7 +16842,7 @@
     "upgrade": {
       "summon": "+5"
     },
-    "image_url": "/static/images/cards/reanimate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reanimate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16885,7 +16885,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/reap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reap.webp",
     "beta_image_url": "/static/images/cards/beta/reap.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16924,7 +16924,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/reaper_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reaper_form.webp",
     "beta_image_url": "/static/images/cards/beta/reaper_form.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -16965,7 +16965,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/reave.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reave.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17005,7 +17005,7 @@
     "upgrade": {
       "cards": "+2"
     },
-    "image_url": "/static/images/cards/reboot.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reboot.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17046,7 +17046,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/rebound.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rebound.webp",
     "beta_image_url": "/static/images/cards/beta/rebound.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17085,7 +17085,7 @@
     "upgrade": {
       "forge": "+4"
     },
-    "image_url": "/static/images/cards/refine_blade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/refine_blade.webp",
     "beta_image_url": "/static/images/cards/beta/refine_blade.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17124,7 +17124,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/reflect.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reflect.webp",
     "beta_image_url": "/static/images/cards/beta/reflect.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17164,7 +17164,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/reflex.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/reflex.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17206,7 +17206,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/refract.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/refract.webp",
     "beta_image_url": "/static/images/cards/beta/refract.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17242,7 +17242,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/regret.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/regret.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17289,7 +17289,7 @@
       "cards": "+1",
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/relax.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/relax.webp",
     "beta_image_url": "/static/images/cards/beta/relax.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17333,7 +17333,7 @@
       "extradamage": "+3",
       "calculationbase": "+3"
     },
-    "image_url": "/static/images/cards/rend.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rend.webp",
     "beta_image_url": "/static/images/cards/beta/rend.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17379,7 +17379,7 @@
     "upgrade": {
       "strengthpower": "+1"
     },
-    "image_url": "/static/images/cards/resonance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/resonance.webp",
     "beta_image_url": "/static/images/cards/beta/resonance.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17421,7 +17421,7 @@
       "cards": "+1",
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/restlessness.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/restlessness.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17465,7 +17465,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/ricochet.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ricochet.webp",
     "beta_image_url": "/static/images/cards/beta/ricochet.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17510,7 +17510,7 @@
     "upgrade": {
       "ostydamage": "+2"
     },
-    "image_url": "/static/images/cards/right_hand_hand.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/right_hand_hand.webp",
     "beta_image_url": "/static/images/cards/beta/right_hand_hand.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17548,7 +17548,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/rip_and_tear.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rip_and_tear.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17588,7 +17588,7 @@
       "damage": "+1",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/rocket_punch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rocket_punch.webp",
     "beta_image_url": "/static/images/cards/beta/rocket_punch.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17634,7 +17634,7 @@
     "upgrade": {
       "rollingboulderpower": "+5"
     },
-    "image_url": "/static/images/cards/rolling_boulder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rolling_boulder.webp",
     "beta_image_url": "/static/images/cards/beta/rolling_boulder.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17675,7 +17675,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/royal_gamble.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/royal_gamble.webp",
     "beta_image_url": "/static/images/cards/beta/royal_gamble.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17716,7 +17716,7 @@
     "upgrade": {
       "gold": "+10"
     },
-    "image_url": "/static/images/cards/royalties.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/royalties.webp",
     "beta_image_url": "/static/images/cards/beta/royalties.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -17761,7 +17761,7 @@
     "upgrade": {
       "strength": "+1"
     },
-    "image_url": "/static/images/cards/rupture.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/rupture.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17799,7 +17799,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/sacrifice.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sacrifice.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17840,7 +17840,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/salvo.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/salvo.webp",
     "beta_image_url": "/static/images/cards/beta/salvo.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17878,7 +17878,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": null,
+    "image_url": "/static/images/beta/v0.106.0/cards/scare.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17919,7 +17919,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/scavenge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/scavenge.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -17966,7 +17966,7 @@
       "doom": "+3",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/scourge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/scourge.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18006,7 +18006,7 @@
       "damage": "+3",
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/scrape.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/scrape.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18044,7 +18044,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/scrawl.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/scrawl.webp",
     "beta_image_url": "/static/images/cards/beta/scrawl.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18087,7 +18087,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/sculpting_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sculpting_strike.webp",
     "beta_image_url": "/static/images/cards/beta/sculpting_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18129,7 +18129,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/seance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/seance.webp",
     "beta_image_url": "/static/images/cards/beta/seance.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18170,7 +18170,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/second_wind.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/second_wind.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18208,7 +18208,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/secret_technique.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/secret_technique.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18249,7 +18249,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/secret_weapon.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/secret_weapon.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18293,7 +18293,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/seeker_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/seeker_strike.webp",
     "beta_image_url": "/static/images/cards/beta/seeker_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18331,7 +18331,7 @@
     "upgrade": {
       "forge": "+4"
     },
-    "image_url": "/static/images/cards/seeking_edge.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/seeking_edge.webp",
     "beta_image_url": "/static/images/cards/beta/seeking_edge.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18378,7 +18378,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/sentry_mode.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sentry_mode.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18423,7 +18423,7 @@
     "upgrade": {
       "serpentformpower": "+2"
     },
-    "image_url": "/static/images/cards/serpent_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/serpent_form.webp",
     "beta_image_url": "/static/images/cards/beta/serpent_form.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18472,7 +18472,7 @@
       "damage": "+2",
       "strength": "+1"
     },
-    "image_url": "/static/images/cards/setup_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/setup_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18512,7 +18512,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/seven_stars.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/seven_stars.webp",
     "beta_image_url": "/static/images/cards/beta/seven_stars.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18552,7 +18552,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/severance.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/severance.webp",
     "beta_image_url": "/static/images/cards/beta/severance.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18590,7 +18590,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/shadow_shield.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shadow_shield.webp",
     "beta_image_url": "/static/images/cards/beta/shadow_shield.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18628,7 +18628,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/shadow_step.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shadow_step.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18666,7 +18666,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/shadowmeld.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shadowmeld.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18704,7 +18704,7 @@
       "Frail": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/shame.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shame.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18748,7 +18748,7 @@
     "upgrade": {
       "enemystrengthloss": "+1"
     },
-    "image_url": "/static/images/cards/shared_fate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shared_fate.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18789,7 +18789,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/shatter.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shatter.webp",
     "beta_image_url": "/static/images/cards/beta/shatter.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18830,7 +18830,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/shining_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shining_strike.webp",
     "beta_image_url": "/static/images/cards/beta/shining_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18872,7 +18872,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/shiv.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shiv.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18915,7 +18915,7 @@
     "upgrade": {
       "power": "+2"
     },
-    "image_url": "/static/images/cards/shockwave.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shockwave.webp",
     "beta_image_url": "/static/images/cards/beta/shockwave.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18956,7 +18956,7 @@
     "upgrade": {
       "block": "+1"
     },
-    "image_url": "/static/images/cards/shroud.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shroud.webp",
     "beta_image_url": "/static/images/cards/beta/shroud.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -18995,7 +18995,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/shrug_it_off.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/shrug_it_off.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19045,7 +19045,7 @@
       "ostydamage": "+1",
       "sicempower": "+1"
     },
-    "image_url": "/static/images/cards/sic_em.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sic_em.webp",
     "beta_image_url": "/static/images/cards/beta/sic_em.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19092,7 +19092,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/signal_boost.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/signal_boost.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19133,7 +19133,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/skewer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/skewer.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19171,7 +19171,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/skim.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/skim.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19216,7 +19216,7 @@
     "upgrade": {
       "sleightoffleshpower": "+4"
     },
-    "image_url": "/static/images/cards/sleight_of_flesh.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sleight_of_flesh.webp",
     "beta_image_url": "/static/images/cards/beta/sleight_of_flesh.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19254,7 +19254,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/slice.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/slice.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19292,7 +19292,7 @@
       "Cards": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/slimed.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/slimed.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19338,7 +19338,7 @@
       "Sloth": 3
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/sloth.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sloth.webp",
     "beta_image_url": "/static/images/cards/beta/sloth.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -19383,7 +19383,7 @@
     "upgrade": {
       "smokestackpower": "+2"
     },
-    "image_url": "/static/images/cards/smokestack.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/smokestack.webp",
     "beta_image_url": "/static/images/cards/beta/smokestack.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19430,7 +19430,7 @@
     "upgrade": {
       "poison": "+3"
     },
-    "image_url": "/static/images/cards/snakebite.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/snakebite.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19474,7 +19474,7 @@
     "upgrade": {
       "ostydamage": "+3"
     },
-    "image_url": "/static/images/cards/snap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/snap.webp",
     "beta_image_url": "/static/images/cards/beta/snap.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19521,7 +19521,7 @@
     "upgrade": {
       "sneakypower": "+1"
     },
-    "image_url": "/static/images/cards/sneaky.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sneaky.webp",
     "beta_image_url": "/static/images/cards/beta/sneaky.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19566,7 +19566,7 @@
       "damage": "+1",
       "stars": "+1"
     },
-    "image_url": "/static/images/cards/solar_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/solar_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19602,7 +19602,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/soot.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/soot.webp",
     "beta_image_url": "/static/images/cards/beta/soot.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -19645,7 +19645,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/soul.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/soul.webp",
     "beta_image_url": "/static/images/cards/beta/soul.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19690,7 +19690,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/soul_storm.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/soul_storm.webp",
     "beta_image_url": "/static/images/cards/beta/soul_storm.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19734,7 +19734,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/sovereign_blade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sovereign_blade.webp",
     "beta_image_url": "/static/images/cards/beta/sovereign_blade.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19777,7 +19777,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/sow.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sow.webp",
     "beta_image_url": "/static/images/cards/beta/sow.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19818,7 +19818,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/spectrum_shift.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spectrum_shift.webp",
     "beta_image_url": "/static/images/cards/beta/spectrum_shift.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19863,7 +19863,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/speedster.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/speedster.webp",
     "beta_image_url": "/static/images/cards/beta/speedster.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19908,7 +19908,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/spinner.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spinner.webp",
     "beta_image_url": "/static/images/cards/beta/spinner.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19946,7 +19946,7 @@
     "upgrade": {
       "blockonexhaust": "+1"
     },
-    "image_url": "/static/images/cards/spirit_of_ash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spirit_of_ash.webp",
     "beta_image_url": "/static/images/cards/beta/spirit_of_ash.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -19985,7 +19985,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/spite.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spite.webp",
     "beta_image_url": "/static/images/cards/beta/spite.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20021,7 +20021,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/splash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/splash.webp",
     "beta_image_url": "/static/images/cards/beta/splash.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20059,7 +20059,7 @@
       "Gold": 600
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/spoils_map.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spoils_map.webp",
     "beta_image_url": "/static/images/cards/beta/spoils_map.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20101,7 +20101,7 @@
     "upgrade": {
       "forge": "+3"
     },
-    "image_url": "/static/images/cards/spoils_of_battle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spoils_of_battle.webp",
     "beta_image_url": "/static/images/cards/beta/spoils_of_battle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20137,7 +20137,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/spore_mind.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spore_mind.webp",
     "beta_image_url": "/static/images/cards/beta/spore_mind.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20182,7 +20182,7 @@
       "summon": "+2",
       "heal": "+2"
     },
-    "image_url": "/static/images/cards/spur.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/spur.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20232,7 +20232,7 @@
       "damage": "+2",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/squash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/squash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20275,7 +20275,7 @@
       "calculationbase": "+5",
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/squeeze.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/squeeze.webp",
     "beta_image_url": "/static/images/cards/beta/squeeze.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20314,7 +20314,7 @@
     "upgrade": {
       "calculationbase": "+3"
     },
-    "image_url": "/static/images/cards/stack.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stack.webp",
     "beta_image_url": "/static/images/cards/beta/stack.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20352,7 +20352,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/stampede.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stampede.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20390,7 +20390,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/stardust.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stardust.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20426,7 +20426,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/stoke.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stoke.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20464,7 +20464,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/stomp.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stomp.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20509,7 +20509,7 @@
     "upgrade": {
       "platingpower": "+2"
     },
-    "image_url": "/static/images/cards/stone_armor.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stone_armor.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20554,7 +20554,7 @@
     "upgrade": {
       "stormpower": "+1"
     },
-    "image_url": "/static/images/cards/storm.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/storm.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20592,7 +20592,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/storm_of_steel.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/storm_of_steel.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20639,7 +20639,7 @@
       "damage": "+2",
       "stranglepower": "+1"
     },
-    "image_url": "/static/images/cards/strangle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strangle.webp",
     "beta_image_url": "/static/images/cards/beta/strangle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20675,7 +20675,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/stratagem.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/stratagem.webp",
     "beta_image_url": "/static/images/cards/beta/stratagem.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20715,7 +20715,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/strike_ironclad.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strike_ironclad.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20755,7 +20755,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/strike_silent.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strike_silent.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20795,7 +20795,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/strike_regent.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strike_regent.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20835,7 +20835,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/strike_necrobinder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strike_necrobinder.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20875,7 +20875,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/strike_defect.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/strike_defect.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20911,7 +20911,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/subroutine.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/subroutine.webp",
     "beta_image_url": "/static/images/cards/beta/subroutine.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20958,7 +20958,7 @@
       "damage": "+2",
       "weak": "+1"
     },
-    "image_url": "/static/images/cards/sucker_punch.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sucker_punch.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -20998,7 +20998,7 @@
     "upgrade": {
       "forge": "+3"
     },
-    "image_url": "/static/images/cards/summon_forth.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/summon_forth.webp",
     "beta_image_url": "/static/images/cards/beta/summon_forth.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21037,7 +21037,7 @@
     "upgrade": {
       "damage": "+8"
     },
-    "image_url": "/static/images/cards/sunder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sunder.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21077,7 +21077,7 @@
     "upgrade": {
       "energy": "+2"
     },
-    "image_url": "/static/images/cards/supercritical.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/supercritical.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21120,7 +21120,7 @@
     "upgrade": {
       "extradamage": "+1"
     },
-    "image_url": "/static/images/cards/supermassive.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/supermassive.webp",
     "beta_image_url": "/static/images/cards/beta/supermassive.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21169,7 +21169,7 @@
       "damage": "+6",
       "weak": "+2"
     },
-    "image_url": "/static/images/cards/suppress.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/suppress.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21210,7 +21210,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/survivor.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/survivor.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21249,7 +21249,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/sweeping_beam.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sweeping_beam.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21293,7 +21293,7 @@
     "upgrade": {
       "ostydamage": "+5"
     },
-    "image_url": "/static/images/cards/sweeping_gaze.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sweeping_gaze.webp",
     "beta_image_url": "/static/images/cards/beta/sweeping_gaze.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21336,7 +21336,7 @@
     "upgrade": {
       "repeat": "+1"
     },
-    "image_url": "/static/images/cards/sword_boomerang.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sword_boomerang.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21383,7 +21383,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/sword_sage.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/sword_sage.webp",
     "beta_image_url": "/static/images/cards/beta/sword_sage.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21424,7 +21424,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/synchronize.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/synchronize.webp",
     "beta_image_url": "/static/images/cards/beta/synchronize.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21465,7 +21465,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/synthesis.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/synthesis.webp",
     "beta_image_url": "/static/images/cards/beta/synthesis.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21505,7 +21505,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/turbo.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/turbo.webp",
     "beta_image_url": "/static/images/cards/beta/turbo.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21545,7 +21545,7 @@
     "upgrade": {
       "energy": "+1"
     },
-    "image_url": "/static/images/cards/tactician.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tactician.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21586,7 +21586,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/tag_team.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tag_team.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21622,7 +21622,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/tank.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tank.webp",
     "beta_image_url": "/static/images/cards/beta/tank.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21669,7 +21669,7 @@
       "block": "+1",
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/taunt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/taunt.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21710,7 +21710,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/tear_asunder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tear_asunder.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21746,7 +21746,7 @@
     "upgrade": {
       "description_changed": true
     },
-    "image_url": "/static/images/cards/tempest.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tempest.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21791,7 +21791,7 @@
     "upgrade": {
       "vigorpower": "+2"
     },
-    "image_url": "/static/images/cards/terraforming.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/terraforming.webp",
     "beta_image_url": "/static/images/cards/beta/terraforming.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21829,7 +21829,7 @@
     "upgrade": {
       "damage": "+1"
     },
-    "image_url": "/static/images/cards/tesla_coil.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tesla_coil.webp",
     "beta_image_url": "/static/images/cards/beta/tesla_coil.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21868,7 +21868,7 @@
     "upgrade": {
       "bombdamage": "+10"
     },
-    "image_url": "/static/images/cards/the_bomb.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_bomb.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21906,7 +21906,7 @@
     "upgrade": {
       "block": "+25"
     },
-    "image_url": "/static/images/cards/the_gambit.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_gambit.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -21946,7 +21946,7 @@
     "upgrade": {
       "damage": "+5"
     },
-    "image_url": "/static/images/cards/the_hunt.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_hunt.webp",
     "beta_image_url": "/static/images/cards/beta/the_hunt.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -21991,7 +21991,7 @@
     "upgrade": {
       "increase": "+1"
     },
-    "image_url": "/static/images/cards/the_scythe.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_scythe.webp",
     "beta_image_url": "/static/images/cards/beta/the_scythe.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22032,7 +22032,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/the_sealed_throne.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_sealed_throne.webp",
     "beta_image_url": "/static/images/cards/beta/the_sealed_throne.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22071,7 +22071,7 @@
     "upgrade": {
       "forge": "+10"
     },
-    "image_url": "/static/images/cards/the_smith.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/the_smith.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22111,7 +22111,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/thinking_ahead.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/thinking_ahead.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22152,7 +22152,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/thrash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/thrash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22190,7 +22190,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/thrumming_hatchet.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/thrumming_hatchet.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22235,7 +22235,7 @@
     "upgrade": {
       "thunderpower": "+2"
     },
-    "image_url": "/static/images/cards/thunder.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/thunder.webp",
     "beta_image_url": "/static/images/cards/beta/thunder.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22281,7 +22281,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/thunderclap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/thunderclap.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22323,7 +22323,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/times_up.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/times_up.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22362,7 +22362,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/tools_of_the_trade.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tools_of_the_trade.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22401,7 +22401,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/toric_toughness.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/toric_toughness.webp",
     "beta_image_url": "/static/images/cards/beta/toric_toughness.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22439,7 +22439,7 @@
       "Damage": 5
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/toxic.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/toxic.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22478,7 +22478,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/tracking.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tracking.webp",
     "beta_image_url": "/static/images/cards/beta/tracking.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22518,7 +22518,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/transfigure.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/transfigure.webp",
     "beta_image_url": "/static/images/cards/beta/transfigure.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22557,7 +22557,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/trash_to_treasure.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/trash_to_treasure.webp",
     "beta_image_url": "/static/images/cards/beta/trash_to_treasure.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22604,7 +22604,7 @@
     "upgrade": {
       "vulnerable": "+1"
     },
-    "image_url": "/static/images/cards/tremble.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tremble.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22645,7 +22645,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/true_grit.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/true_grit.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22685,7 +22685,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/twin_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/twin_strike.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22723,7 +22723,7 @@
     "upgrade": {
       "add_innate": true
     },
-    "image_url": "/static/images/cards/tyranny.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/tyranny.webp",
     "beta_image_url": "/static/images/cards/beta/tyranny.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22766,7 +22766,7 @@
     "upgrade": {
       "block": "+4"
     },
-    "image_url": "/static/images/cards/ultimate_defend.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ultimate_defend.webp",
     "beta_image_url": "/static/images/cards/beta/ultimate_defend.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22806,7 +22806,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/ultimate_strike.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/ultimate_strike.webp",
     "beta_image_url": "/static/images/cards/beta/ultimate_strike.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22844,7 +22844,7 @@
     "upgrade": {
       "block": "+2"
     },
-    "image_url": "/static/images/cards/undeath.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/undeath.webp",
     "beta_image_url": "/static/images/cards/beta/undeath.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22886,7 +22886,7 @@
     "upgrade": {
       "calculationbase": "+3"
     },
-    "image_url": "/static/images/cards/unleash.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/unleash.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22922,7 +22922,7 @@
     "upgrade": {
       "cost": 1
     },
-    "image_url": "/static/images/cards/unmovable.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/unmovable.webp",
     "beta_image_url": "/static/images/cards/beta/unmovable.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -22960,7 +22960,7 @@
     "upgrade": {
       "damage": "+6"
     },
-    "image_url": "/static/images/cards/unrelenting.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/unrelenting.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23000,7 +23000,7 @@
     "upgrade": {
       "block": "+3"
     },
-    "image_url": "/static/images/cards/untouchable.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/untouchable.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23043,7 +23043,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/up_my_sleeve.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/up_my_sleeve.webp",
     "beta_image_url": "/static/images/cards/beta/up_my_sleeve.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23082,7 +23082,7 @@
     "upgrade": {
       "power": "+1"
     },
-    "image_url": "/static/images/cards/uppercut.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/uppercut.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23120,7 +23120,7 @@
     "upgrade": {
       "damage": "+2"
     },
-    "image_url": "/static/images/cards/uproar.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/uproar.webp",
     "beta_image_url": "/static/images/cards/beta/uproar.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23158,7 +23158,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/veilpiercer.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/veilpiercer.webp",
     "beta_image_url": "/static/images/cards/beta/veilpiercer.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23196,7 +23196,7 @@
     "upgrade": {
       "stars": "+1"
     },
-    "image_url": "/static/images/cards/venerate.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/venerate.webp",
     "beta_image_url": "/static/images/cards/beta/venerate.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23234,7 +23234,7 @@
     "upgrade": {
       "cards": "+1"
     },
-    "image_url": "/static/images/cards/vicious.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/vicious.webp",
     "beta_image_url": "/static/images/cards/beta/vicious.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23273,7 +23273,7 @@
       "Energy": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/void.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/void.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23324,7 +23324,7 @@
     "upgrade": {
       "remove_ethereal": true
     },
-    "image_url": "/static/images/cards/void_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/void_form.webp",
     "beta_image_url": "/static/images/cards/beta/void_form.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23365,7 +23365,7 @@
     "upgrade": {
       "damage": "+4"
     },
-    "image_url": "/static/images/cards/volley.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/volley.webp",
     "beta_image_url": "/static/images/cards/beta/volley.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23406,7 +23406,7 @@
     "upgrade": {
       "remove_exhaust": true
     },
-    "image_url": "/static/images/cards/voltaic.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/voltaic.webp",
     "beta_image_url": "/static/images/cards/beta/voltaic.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23452,7 +23452,7 @@
       "WasteAway": 1
     },
     "upgrade": null,
-    "image_url": "/static/images/cards/waste_away.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/waste_away.webp",
     "beta_image_url": "/static/images/cards/beta/waste_away.webp",
     "type_variants": null,
     "can_be_generated_in_combat": false,
@@ -23490,7 +23490,7 @@
     "upgrade": {
       "retainamount": "+1"
     },
-    "image_url": "/static/images/cards/well_laid_plans.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/well_laid_plans.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23528,7 +23528,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": "/static/images/cards/whirlwind.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/whirlwind.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23568,7 +23568,7 @@
     "upgrade": {
       "damage": "+11"
     },
-    "image_url": "/static/images/cards/whistle.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/whistle.webp",
     "beta_image_url": "/static/images/cards/beta/whistle.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23609,7 +23609,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/white_noise.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/white_noise.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23650,7 +23650,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/wish.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/wish.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23693,7 +23693,7 @@
     "upgrade": {
       "add_retain": true
     },
-    "image_url": "/static/images/cards/wisp.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/wisp.webp",
     "beta_image_url": "/static/images/cards/beta/wisp.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23736,7 +23736,7 @@
     "upgrade": {
       "damage": "+3"
     },
-    "image_url": null,
+    "image_url": "/static/images/beta/v0.106.0/cards/wither.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23775,7 +23775,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/wound.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/wound.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23830,7 +23830,7 @@
     "upgrade": {
       "intangiblepower": "+1"
     },
-    "image_url": "/static/images/cards/wraith_form.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/wraith_form.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23867,7 +23867,7 @@
     "spawns_cards": null,
     "vars": null,
     "upgrade": null,
-    "image_url": "/static/images/cards/writhe.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/writhe.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23911,7 +23911,7 @@
       "damage": "+2",
       "forge": "+2"
     },
-    "image_url": "/static/images/cards/wrought_in_war.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/wrought_in_war.webp",
     "beta_image_url": "/static/images/cards/beta/wrought_in_war.webp",
     "type_variants": null,
     "can_be_generated_in_combat": null,
@@ -23947,7 +23947,7 @@
     "upgrade": {
       "cost": 0
     },
-    "image_url": "/static/images/cards/zap.webp",
+    "image_url": "/static/images/beta/v0.106.0/cards/zap.webp",
     "beta_image_url": null,
     "type_variants": null,
     "can_be_generated_in_combat": null,
