@@ -36,9 +36,10 @@ ENTITY_FILES = [
     "epochs",
 ]
 
-_RUNS_DIR = Path(
-    os.environ.get("DATA_DIR", Path(__file__).resolve().parents[3] / "data")
-) / "runs"
+_RUNS_DIR = (
+    Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parents[3] / "data"))
+    / "runs"
+)
 
 _MONGO_PROJECTION = {
     "_id": 1,
