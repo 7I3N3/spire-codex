@@ -13,11 +13,10 @@ import hashlib
 import json
 import os
 import sqlite3
-
-OFFICIAL_CHARACTERS = {"IRONCLAD", "SILENT", "DEFECT", "NECROBINDER", "REGENT"}
-
 from contextlib import contextmanager
 from pathlib import Path
+
+OFFICIAL_CHARACTERS = {"IRONCLAD", "SILENT", "DEFECT", "NECROBINDER", "REGENT"}
 
 # Use DATA_DIR env var (Docker) or fall back to project data/
 _data_dir = Path(
