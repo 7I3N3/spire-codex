@@ -16,6 +16,8 @@ import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
 
+OFFICIAL_CHARACTERS = {"IRONCLAD", "SILENT", "DEFECT", "NECROBINDER", "REGENT"}
+
 # Use DATA_DIR env var (Docker) or fall back to project data/
 _data_dir = Path(
     os.environ.get("DATA_DIR", Path(__file__).resolve().parents[3] / "data")
@@ -770,6 +772,7 @@ def get_stats(
                     else 0,
                 }
                 for r in char_stats
+                if r["character"] in OFFICIAL_CHARACTERS
             ],
             "ascensions": [
                 {

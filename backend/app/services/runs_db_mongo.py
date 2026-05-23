@@ -46,6 +46,8 @@ from pymongo.errors import DuplicateKeyError
 
 from ..metrics import db_operations, db_operation_duration
 
+OFFICIAL_CHARACTERS = {"IRONCLAD", "SILENT", "DEFECT", "NECROBINDER", "REGENT"}
+
 
 @contextmanager
 def _timed_op(operation: str, collection: str = "runs"):
@@ -943,6 +945,7 @@ def get_stats(
                 else 0,
             }
             for r in char_stats
+            if r["_id"] in OFFICIAL_CHARACTERS
         ],
         "ascensions": [
             {
