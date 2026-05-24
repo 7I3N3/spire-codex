@@ -66,6 +66,10 @@ def clear_auth_cookie(response: JSONResponse) -> None:
 def get_current_user(request: Request) -> dict | None:
     token = request.cookies.get(_COOKIE_NAME)
     if not token:
+        auth_header = request.headers.get("authorization", "")
+        if auth_header.startswith("Bearer "):
+            token = auth_header[7:]
+    if not token:
         return None
 
     payload = decode_token(token)

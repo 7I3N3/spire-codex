@@ -38,7 +38,7 @@ from typing import Optional
 
 import httpx
 from fastapi import APIRouter, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from pydantic import BaseModel
 from slowapi import Limiter
 
@@ -146,6 +146,30 @@ async def start(request: Request) -> dict:
     }
 
 
+@router.get("/redirect")
+@limiter.limit("20/minute")
+async def redirect_to_steam(request: Request):
+    """Direct browser redirect to Steam login. For mobile and popup-blocked flows."""
+    sid = _new_session()
+    base = _public_base(request)
+    return_to = f"{base}/api/auth/steam/callback?session={sid}"
+    realm = base + "/"
+
+    params = {
+        "openid.ns": "http://specs.openid.net/auth/2.0",
+        "openid.mode": "checkid_setup",
+        "openid.return_to": return_to,
+        "openid.realm": realm,
+        "openid.identity": "http://specs.openid.net/auth/2.0/identifier_select",
+        "openid.claimed_id": "http://specs.openid.net/auth/2.0/identifier_select",
+    }
+    login_url = "https://steamcommunity.com/openid/login?" + urllib.parse.urlencode(
+        params
+    )
+    logger.info("steam-auth redirect session=%s", sid[:8])
+    return RedirectResponse(login_url)
+
+
 @router.get("/callback", response_class=HTMLResponse)
 async def callback(request: Request) -> HTMLResponse:
     """Steam-OpenID return URL. Validates with Steam and stores the result."""
@@ -153,9 +177,10 @@ async def callback(request: Request) -> HTMLResponse:
     session_id = qs.get("session", "")
     session = _sessions.get(session_id)
     if not session:
-        return _close_page(
-            error="This sign-in link has expired. Try again from the overlay."
-        )
+        import os
+
+        frontend = os.environ.get("FRONTEND_URL", "").strip() or _public_base(request)
+        return RedirectResponse(f"{frontend}/profile")
 
     # OpenID response can also be `cancel` if the user bailed.
     mode = qs.get("openid.mode")
@@ -222,6 +247,24 @@ async def callback(request: Request) -> HTMLResponse:
         persona,
         session.user_id,
     )
+
+    # Redirect to frontend with token in URL. The frontend reads
+    # the token param and calls a backend endpoint to set the cookie
+    # on the correct origin. In production (same domain) the cookie
+    # approach works directly; in local dev (different ports) we need
+    # this token handoff.
+    if session.token:
+        import os
+
+        frontend = os.environ.get("FRONTEND_URL", "").strip() or _public_base(request)
+        _sessions.pop(session_id, None)
+        response = RedirectResponse(
+            f"{frontend}/profile?auth=steam&token={session.token}"
+        )
+        response.headers["Cache-Control"] = "no-store, no-cache"
+        response.headers["Pragma"] = "no-cache"
+        return response
+
     return _close_page(name=persona, steamid=steamid)
 
 

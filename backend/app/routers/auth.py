@@ -46,6 +46,34 @@ async def logout(request: Request):
     return response
 
 
+@router.post("/set-cookie")
+@limiter.limit("20/minute")
+async def set_cookie(request: Request):
+    """Accept a JWT token and set it as an httpOnly cookie.
+
+    Used by the frontend after OAuth redirects when backend and frontend
+    are on different origins (local dev with separate ports).
+    """
+    try:
+        body = await request.json()
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+
+    token = body.get("token", "")
+    if not token:
+        raise HTTPException(status_code=400, detail="Token is required")
+
+    from ..services.auth_jwt import decode_token, set_auth_cookie
+
+    payload = decode_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
+
+    response = JSONResponse({"success": True})
+    set_auth_cookie(response, token)
+    return response
+
+
 @router.patch("/username")
 @limiter.limit("10/minute")
 async def update_username(request: Request):

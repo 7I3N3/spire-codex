@@ -425,12 +425,22 @@ app.add_middleware(VersionMiddleware)
 app.add_middleware(RequestLoggingMiddleware)
 app.add_middleware(CORSStaticMiddleware)
 app.add_middleware(GZipMiddleware, minimum_size=1000)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+_cors_origins = os.environ.get("CORS_ORIGINS", "").strip()
+if _cors_origins:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=_cors_origins.split(","),
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+else:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 # ── Prometheus metrics ────────────────────────────────────────
 Instrumentator(

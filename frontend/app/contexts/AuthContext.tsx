@@ -41,14 +41,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const fetchMe = useCallback(async () => {
     try {
+      const headers: Record<string, string> = {};
+      const token = localStorage.getItem("spire_token");
+      if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+      }
       const res = await fetch(`${API_BASE}/api/auth/me`, {
         credentials: "include",
+        headers,
       });
       if (res.ok) {
         const data = await res.json();
         setUser(data);
       } else {
         setUser(null);
+        localStorage.removeItem("spire_token");
       }
     } catch {
       setUser(null);
@@ -58,82 +65,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    fetchMe();
+    // Check if returning from OAuth with a token in the URL
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    if (token) {
+      // Clean the token from the URL
+      params.delete("token");
+      params.delete("auth");
+      const clean = params.toString();
+      const path = window.location.pathname + (clean ? `?${clean}` : "");
+      window.history.replaceState({}, "", path);
+
+      localStorage.setItem("spire_token", token);
+      // Try to set httpOnly cookie (works same-origin in production).
+      // If it fails (cross-origin dev), the Bearer header fallback handles it.
+      fetch(`${API_BASE}/api/auth/set-cookie`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token }),
+      }).catch(() => {}).finally(() => fetchMe());
+    } else {
+      fetchMe();
+    }
   }, [fetchMe]);
 
   const loginSteam = useCallback(() => {
-    const width = 800;
-    const height = 600;
-    const left = window.screenX + (window.outerWidth - width) / 2;
-    const top = window.screenY + (window.outerHeight - height) / 2;
-
-    const popup = window.open(
-      "about:blank",
-      "steam_login",
-      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no`
-    );
-
-    if (!popup) {
-      alert("Popup was blocked. Allow popups for this site and try again.");
-      return;
-    }
-
-    fetch(`${API_BASE}/api/auth/steam/start`, {
-      method: "POST",
-      credentials: "include",
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        if (data.login_url) {
-          popup.location.href = data.login_url;
-          pollSteamSession(data.session_id, popup);
-        } else {
-          popup.close();
-        }
-      })
-      .catch(() => {
-        popup.close();
-      });
+    // Always use redirect flow -- popups are unreliable on mobile
+    // and get blocked by many browsers
+    window.location.href = `${API_BASE}/api/auth/steam/redirect`;
   }, []);
-
-  const pollSteamSession = useCallback(
-    (sessionId: string, popup: Window) => {
-      const interval = setInterval(async () => {
-        if (popup.closed) {
-          clearInterval(interval);
-          fetchMe();
-          return;
-        }
-        try {
-          const res = await fetch(
-            `${API_BASE}/api/auth/steam/poll/${sessionId}`,
-            { credentials: "include" }
-          );
-          if (!res.ok) {
-            clearInterval(interval);
-            return;
-          }
-          const data = await res.json();
-          if (data.status === "ok") {
-            clearInterval(interval);
-            popup.close();
-            fetchMe();
-          } else if (data.status === "error") {
-            clearInterval(interval);
-            popup.close();
-          }
-        } catch {
-          // Network error during poll, keep trying
-        }
-      }, 2000);
-
-      setTimeout(() => {
-        clearInterval(interval);
-        if (!popup.closed) popup.close();
-      }, 300000);
-    },
-    [fetchMe]
-  );
 
   const loginDiscord = useCallback(() => {
     window.location.href = `${API_BASE}/api/auth/discord/start`;
