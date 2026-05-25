@@ -65,20 +65,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    // Check if returning from OAuth with a token in the URL
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
-    if (token) {
-      // Clean the token from the URL
+    const linked = params.get("linked");
+    const auth = params.get("auth");
+
+    // Clean auth-related params from the URL
+    if (token || linked || auth) {
       params.delete("token");
       params.delete("auth");
+      params.delete("linked");
+      params.delete("error");
       const clean = params.toString();
       const path = window.location.pathname + (clean ? `?${clean}` : "");
       window.history.replaceState({}, "", path);
+    }
 
+    if (token) {
       localStorage.setItem("spire_token", token);
-      // Try to set httpOnly cookie (works same-origin in production).
-      // If it fails (cross-origin dev), the Bearer header fallback handles it.
       fetch(`${API_BASE}/api/auth/set-cookie`, {
         method: "POST",
         credentials: "include",
