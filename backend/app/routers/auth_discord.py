@@ -156,24 +156,48 @@ async def callback(request: Request):
     if not discord_id:
         return RedirectResponse(f"{base}/login?error=discord_failed")
 
-    # Create or find user
+    # If the user is already logged in (has a valid JWT), link Discord
+    # to their existing account instead of creating a new one.
     try:
-        from ..services.users_db import find_or_create_by_discord
-        from ..services.auth_jwt import create_token, set_auth_cookie
+        from ..services.auth_jwt import get_current_user, create_token, set_auth_cookie
+        from ..services.users_db import (
+            find_or_create_by_discord,
+            link_discord,
+            update_email as _update_email,
+        )
 
-        user = find_or_create_by_discord(discord_id, discord_username, email)
-        token = create_token(user_id=user["_id"], discord_id=discord_id)
+        existing_user = get_current_user(request)
 
-        needs_email = not user.get("email")
-        redirect_path = "/settings" if needs_email else "/profile"
-        response = RedirectResponse(f"{base}{redirect_path}?auth=discord")
+        if existing_user and not existing_user.get("discord_id"):
+            result = link_discord(existing_user["_id"], discord_id)
+            if result.get("error"):
+                return RedirectResponse(
+                    f"{base}/settings?error={result['error']}"
+                )
+            if email and not existing_user.get("email"):
+                _update_email(existing_user["_id"], email)
+            user = existing_user
+            user["discord_id"] = discord_id
+        else:
+            user = find_or_create_by_discord(discord_id, discord_username, email)
+
+        token = create_token(
+            user_id=user["_id"],
+            steam_id=user.get("steam_id"),
+            discord_id=discord_id,
+        )
+
+        needs_email = not user.get("email") and not email
+        redirect_path = "/settings" if needs_email else "/settings?linked=discord"
+        response = RedirectResponse(f"{base}{redirect_path}")
         set_auth_cookie(response, token)
 
         logger.info(
-            "discord-auth ok discord_id=%s user=%s username=%s",
+            "discord-auth ok discord_id=%s user=%s username=%s linked=%s",
             discord_id,
             user["_id"],
             discord_username,
+            bool(existing_user),
         )
         return response
     except Exception as exc:
