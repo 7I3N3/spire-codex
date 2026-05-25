@@ -55,6 +55,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(data);
       } else {
         setUser(null);
+        localStorage.removeItem("spire_token");
       }
     } catch {
       setUser(null);
@@ -66,9 +67,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
+    const linked = params.get("linked");
+    const auth = params.get("auth");
 
     // Clean auth-related params from the URL
-    if (token || params.get("linked") || params.get("auth")) {
+    if (token || linked || auth) {
       params.delete("token");
       params.delete("auth");
       params.delete("linked");
@@ -79,7 +82,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     if (token) {
-      // Save token first, then try cookie, then fetch user
       localStorage.setItem("spire_token", token);
       fetch(`${API_BASE}/api/auth/set-cookie`, {
         method: "POST",
@@ -90,9 +92,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } else {
       fetchMe();
     }
-    // Run only once on mount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchMe]);
 
   const loginSteam = useCallback(() => {
     // Always use redirect flow -- popups are unreliable on mobile
