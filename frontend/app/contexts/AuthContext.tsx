@@ -101,6 +101,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const logout = useCallback(async () => {
+    localStorage.removeItem("spire_token");
     try {
       await fetch(`${API_BASE}/api/auth/logout`, {
         method: "POST",
