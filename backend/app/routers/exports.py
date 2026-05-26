@@ -1,23 +1,20 @@
+import gzip
 import io
+import json
+import os
 import zipfile
+from pathlib import Path
 
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 from slowapi import Limiter
 
 from ..dependencies import VALID_LANGUAGES, client_ip
-from ..metrics import data_exports
+from ..metrics import data_exports, run_exports
 from ..services.data_service import DATA_DIR
 
 router = APIRouter(prefix="/api/exports", tags=["Exports"])
 
-# Per-language export builds a multi-file zip (15+ JSON files, 1-3 MB
-# compressed) on every request. CPU cost is the deflate pass — roughly
-# 20-100ms each — plus the egress bytes. Way too expensive to fall
-# under the global 300/min default. 10/hour per real IP is plenty for
-# legitimate "give me a snapshot of the eng locale" use; anything
-# higher and you're either scraping or you should be using the JSON
-# endpoints directly.
 limiter = Limiter(key_func=client_ip)
 
 ENTITY_FILES = [
@@ -38,6 +35,80 @@ ENTITY_FILES = [
     "achievements",
     "epochs",
 ]
+
+_RUNS_DIR = (
+    Path(os.environ.get("DATA_DIR", Path(__file__).resolve().parents[3] / "data"))
+    / "runs"
+)
+
+OFFICIAL_CHARACTERS = {"IRONCLAD", "SILENT", "DEFECT", "NECROBINDER", "REGENT"}
+
+
+def _official_run_hashes() -> list[str]:
+    """Get hashes of runs with official characters from Mongo."""
+    from ..services.runs_db_mongo import _get_collection
+
+    coll = _get_collection()
+    cursor = coll.find(
+        {"character": {"$in": list(OFFICIAL_CHARACTERS)}},
+        {"_id": 1},
+        no_cursor_timeout=True,
+    )
+    try:
+        return [doc["_id"] for doc in cursor]
+    finally:
+        cursor.close()
+
+
+def _stream_runs_jsonl():
+    hashes = _official_run_hashes()
+
+    buf = io.BytesIO()
+    gz = gzip.GzipFile(fileobj=buf, mode="wb")
+
+    for run_hash in hashes:
+        run_file = _RUNS_DIR / f"{run_hash}.json"
+        if not run_file.exists():
+            continue
+        try:
+            raw = run_file.read_text(encoding="utf-8").strip()
+            json.loads(raw)
+        except (json.JSONDecodeError, OSError):
+            continue
+        gz.write(raw.encode("utf-8"))
+        gz.write(b"\n")
+        if buf.tell() > 65536:
+            gz.flush()
+            yield buf.getvalue()
+            buf.seek(0)
+            buf.truncate()
+
+    gz.close()
+    tail = buf.getvalue()
+    if tail:
+        yield tail
+
+
+# Declared BEFORE the /{lang} route so FastAPI matches the literal
+# path "runs" instead of treating it as a language code.
+@router.get("/runs")
+@limiter.limit("2/hour")
+def export_runs(request: Request):
+    """Bulk export of all submitted runs as gzipped JSONL.
+
+    Each line is the full raw game JSON as submitted by the client,
+    including players, map_point_history, acts, deck, relics, and
+    card_choices. Only runs with official characters are included.
+    """
+    run_exports.inc()
+    return StreamingResponse(
+        _stream_runs_jsonl(),
+        media_type="application/gzip",
+        headers={
+            "Content-Disposition": 'attachment; filename="spire-codex-runs.jsonl.gz"',
+            "Cache-Control": "no-store",
+        },
+    )
 
 
 @router.get("/{lang}")
