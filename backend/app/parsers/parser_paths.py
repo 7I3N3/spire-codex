@@ -105,13 +105,17 @@ def resolve_image_url(entity_type: str, name_stem: str) -> str | None:
         )
         if per_version_png.exists():
             if CDN_BASE_URL:
-                return f"{CDN_BASE_URL}/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
+                return (
+                    f"{CDN_BASE_URL}/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
+                )
             return f"/static/images/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
 
         legacy_beta_png = DATA_DIR / "images" / entity_type / f"{name_stem}.png"
         if legacy_beta_png.exists():
             if CDN_BASE_URL:
-                return f"{CDN_BASE_URL}/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
+                return (
+                    f"{CDN_BASE_URL}/beta/{BETA_VERSION}/{entity_type}/{name_stem}.webp"
+                )
             return f"/static/data-beta/{BETA_VERSION}/images/{entity_type}/{name_stem}.webp"
 
     stable_png = STATIC_IMAGES_DIR / entity_type / f"{name_stem}.png"
