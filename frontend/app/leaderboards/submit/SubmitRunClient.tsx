@@ -396,44 +396,43 @@ export default function SubmitRunClient() {
             Drop .run files here or click to browse
           </p>
         )}
-      </div>
 
-      {/* Upload progress */}
-      {uploadProgress && (
-        <div>
-          <div className="w-full bg-[var(--bg-primary)] rounded-full h-2 mb-2">
-            <div
-              className="h-2 rounded-full bg-[var(--accent-gold)] transition-all"
-              style={{
-                width: `${(uploadProgress.done / uploadProgress.total) * 100}%`,
-              }}
-            />
+        {uploadProgress && (
+          <div className="mt-4">
+            <div className="w-full bg-[var(--bg-primary)] rounded-full h-2 mb-2">
+              <div
+                className="h-2 rounded-full bg-[var(--accent-gold)] transition-all"
+                style={{
+                  width: `${(uploadProgress.done / uploadProgress.total) * 100}%`,
+                }}
+              />
+            </div>
+            <p className="text-xs text-[var(--text-muted)]">
+              {uploadProgress.done === uploadProgress.total ? (
+                <>
+                  {t("Done!", lang)}{" "}
+                  {uploadProgress.total - uploadProgress.dupes - uploadProgress.errors}{" "}
+                  {t("submitted", lang)}
+                  {uploadProgress.dupes > 0 && (
+                    <>, {uploadProgress.dupes} {t("duplicates skipped", lang)}</>
+                  )}
+                  {uploadProgress.errors > 0 && (
+                    <>, {uploadProgress.errors} {t("invalid", lang)}</>
+                  )}
+                </>
+              ) : (
+                <>
+                  {t("Processing", lang)} {uploadProgress.done} {t("of", lang)}{" "}
+                  {uploadProgress.total}...
+                </>
+              )}
+            </p>
           </div>
-          <p className="text-xs text-[var(--text-muted)]">
-            {uploadProgress.done === uploadProgress.total ? (
-              <>
-                {t("Done!", lang)}{" "}
-                {uploadProgress.total - uploadProgress.dupes - uploadProgress.errors}{" "}
-                {t("submitted", lang)}
-                {uploadProgress.dupes > 0 && (
-                  <>, {uploadProgress.dupes} {t("duplicates skipped", lang)}</>
-                )}
-                {uploadProgress.errors > 0 && (
-                  <>, {uploadProgress.errors} {t("invalid", lang)}</>
-                )}
-              </>
-            ) : (
-              <>
-                {t("Processing", lang)} {uploadProgress.done} {t("of", lang)}{" "}
-                {uploadProgress.total}...
-              </>
-            )}
-          </p>
-        </div>
-      )}
+        )}
 
-      {/* OS paths + Overwolf */}
-      <RunFileHelp />
+        <hr className="border-[var(--border-subtle)] my-4" />
+        <RunFileHelp />
+      </div>
 
       {error && (
         <p className="text-[var(--color-ironclad)] text-sm">{error}</p>
