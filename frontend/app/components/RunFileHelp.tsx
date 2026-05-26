@@ -7,7 +7,7 @@ export default function RunFileHelp() {
   const { lang } = useLanguage();
 
   return (
-    <div className="text-left text-xs text-[var(--text-muted)] space-y-3">
+    <div className="text-left text-xs text-[var(--text-muted)] space-y-3" onClick={(e) => e.stopPropagation()}>
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
         <a
           href="https://www.overwolf.com/app/ptrlrd-spire_codex"
