@@ -331,6 +331,8 @@ def _propagate_username(user_id: str, new_username: str) -> None:
 
 
 def _try_claim_run(run_hash: str, user: dict) -> None:
+    """Claim a run for the user. Also clears deleted_at so re-uploading
+    a previously deleted run restores it to My Runs."""
     if not os.environ.get("MONGO_URL", "").strip() or not run_hash:
         return
     try:
