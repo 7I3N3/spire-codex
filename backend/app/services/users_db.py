@@ -29,7 +29,7 @@ _client: MongoClient | None = None
 _coll = None
 
 _USERNAME_RE = re.compile(r"[^a-zA-Z0-9_\- ]")
-_USERNAME_MAX = 25
+_USERNAME_MAX = 32
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 _USERNAME_CHANGES_PER_DAY = 3
 

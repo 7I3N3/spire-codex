@@ -133,7 +133,7 @@ export default function SettingsClient() {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              maxLength={25}
+              maxLength={32}
               placeholder="Enter display name"
               className="w-full px-3 py-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--border-accent)]"
             />
@@ -156,7 +156,7 @@ export default function SettingsClient() {
           </button>
         </div>
         <p className="text-xs text-[var(--text-tertiary)]">
-          Letters, numbers, spaces, hyphens, underscores. Max 25 characters. {changesRemaining} changes remaining today.
+          Letters, numbers, spaces, hyphens, underscores. Max 32 characters. {changesRemaining} changes remaining today.
         </p>
       </section>
 
