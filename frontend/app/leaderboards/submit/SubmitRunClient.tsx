@@ -285,9 +285,9 @@ export default function SubmitRunClient() {
         <input
           type="text"
           value={username}
-          onChange={(e) => setUsername(e.target.value.slice(0, 25))}
+          onChange={(e) => setUsername(e.target.value.slice(0, 32))}
           placeholder={t("Username (optional)", lang)}
-          maxLength={25}
+          maxLength={32}
           className="px-3 py-2 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-subtle)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--accent-gold)] w-full sm:w-48"
         />
       )}

@@ -90,7 +90,7 @@ async def submit_run_endpoint(request: Request, username: str | None = None):
     if username:
         import re
 
-        sanitized = re.sub(r"[^a-zA-Z0-9_\- ]", "", username.strip())[:25].strip()
+        sanitized = re.sub(r"[^a-zA-Z0-9_\- ]", "", username.strip())[:32].strip()
         clean_username = sanitized or None
 
     result = submit_run(data, username=clean_username)
@@ -156,7 +156,7 @@ async def claim_runs_endpoint(request: Request):
 
     import re
 
-    sanitized = re.sub(r"[^a-zA-Z0-9_\- ]", "", raw_username.strip())[:25].strip()
+    sanitized = re.sub(r"[^a-zA-Z0-9_\- ]", "", raw_username.strip())[:32].strip()
     if not sanitized:
         raise HTTPException(
             status_code=400, detail="username is empty after sanitization"
