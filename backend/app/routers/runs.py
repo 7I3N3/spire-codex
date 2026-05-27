@@ -192,6 +192,7 @@ def list_runs(
     build_id: str | None = None,
     players: str | None = None,
     game_mode: str | None = None,
+    today: bool = False,
     page: int = 1,
     limit: int = 50,
 ):
@@ -208,6 +209,7 @@ def list_runs(
             build_id=build_id,
             players=players,
             game_mode=game_mode,
+            today=today,
             page=page,
             limit=limit,
         )
@@ -286,6 +288,7 @@ def get_leaderboard(
     character: str | None = None,
     players: str | None = None,
     game_mode: str | None = None,
+    today: bool = False,
     page: int = 1,
     limit: int = 50,
 ):
@@ -308,6 +311,7 @@ def get_leaderboard(
             character=character,
             players=players,
             game_mode=game_mode,
+            today=today,
             page=page,
             limit=limit,
         )

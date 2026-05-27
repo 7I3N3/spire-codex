@@ -1219,6 +1219,7 @@ def list_runs(
     build_id: str | None = None,
     players: str | None = None,
     game_mode: str | None = None,
+    today: bool = False,
     page: int = 1,
     limit: int = 50,
 ) -> dict:
@@ -1244,6 +1245,11 @@ def list_runs(
         q["player_count"] = {"$gt": 1}
     if game_mode:
         q["game_mode"] = game_mode
+    if today:
+        today_start = datetime.now(timezone.utc).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+        q["submitted_at"] = {"$gte": today_start}
 
     sort_map = {
         "time_asc": [("run_time", 1)],
@@ -1276,6 +1282,7 @@ def leaderboard(
     character: str | None = None,
     players: str | None = None,
     game_mode: str | None = None,
+    today: bool = False,
     page: int = 1,
     limit: int = 50,
 ) -> dict:
@@ -1299,6 +1306,11 @@ def leaderboard(
         q["player_count"] = {"$gt": 1}
     if game_mode:
         q["game_mode"] = game_mode
+    if today:
+        today_start = datetime.now(timezone.utc).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
+        q["submitted_at"] = {"$gte": today_start}
 
     if category == "highest_ascension":
         sort_clause = [("ascension", -1), ("run_time", 1)]
