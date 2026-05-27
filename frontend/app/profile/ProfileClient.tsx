@@ -30,13 +30,6 @@ interface UploadResult {
   run_hash?: string;
 }
 
-const CHARACTER_COLORS: Record<string, string> = {
-  IRONCLAD: "#d53b27",
-  SILENT: "#23935b",
-  DEFECT: "#3873a9",
-  NECROBINDER: "#bf5a85",
-  REGENT: "#f07c1e",
-};
 
 export default function ProfileClient() {
   const { user, loading } = useAuth();
@@ -160,7 +153,22 @@ export default function ProfileClient() {
         {user.username ? `${user.username}'s Profile` : "Your Profile"}
       </h1>
 
-      {/* Upload section */}
+      {/* Stats (includes My Runs as a tab) */}
+      <section>
+        <ProfileStats
+          runs={runs}
+          runsTotal={total}
+          runsLoading={runsLoading}
+          runsPage={page}
+          runsTotalPages={totalPages}
+          onPageChange={setPage}
+          onDeleteRun={handleDelete}
+          deleteConfirm={deleteConfirm}
+          onDeleteConfirm={setDeleteConfirm}
+        />
+      </section>
+
+      {/* Claim Runs */}
       <section>
         <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Claim Runs</h2>
         <RunDropZone onFiles={(files) => handleUpload(files)} uploading={uploading} />
@@ -184,119 +192,6 @@ export default function ProfileClient() {
             ))}
           </div>
         )}
-      </section>
-
-      {/* Runs list */}
-      <section>
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)]">
-            My Runs {total > 0 && <span className="text-sm font-normal text-[var(--text-tertiary)]">({total})</span>}
-          </h2>
-        </div>
-
-        {runsLoading ? (
-          <div className="space-y-2">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-12 bg-[var(--bg-card)] rounded animate-pulse" />
-            ))}
-          </div>
-        ) : runs.length === 0 ? (
-          <div className="text-center py-8 text-[var(--text-secondary)]">
-            <p>No runs yet. Submit runs from the Spire Compendium app or upload .run files above.</p>
-          </div>
-        ) : (
-          <>
-            <div className="space-y-1.5">
-              {runs.map((run) => (
-                <div
-                  key={run.run_hash}
-                  className="flex items-center gap-2 sm:gap-3 px-3 py-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] text-sm"
-                >
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: CHARACTER_COLORS[run.character] || "#888" }}
-                  />
-                  <span className="font-medium text-[var(--text-primary)] w-20 sm:w-24 truncate">
-                    {run.character}
-                  </span>
-                  <span className={`shrink-0 text-xs px-1.5 py-0.5 rounded ${
-                    run.win
-                      ? "bg-green-500/15 text-green-400"
-                      : run.was_abandoned
-                        ? "bg-yellow-500/15 text-yellow-400"
-                        : "bg-red-500/15 text-red-400"
-                  }`}>
-                    {run.win ? "W" : run.was_abandoned ? "A" : "L"}
-                  </span>
-                  <span className="text-[var(--text-tertiary)] text-xs hidden sm:inline">
-                    A{run.ascension}
-                  </span>
-                  <span className="text-[var(--text-tertiary)] text-xs hidden sm:inline">
-                    F{run.floors_reached}
-                  </span>
-                  <span className="flex-1" />
-                  <Link
-                    href={`/runs/${run.run_hash}`}
-                    className="text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors shrink-0"
-                  >
-                    View
-                  </Link>
-                  {deleteConfirm === run.run_hash ? (
-                    <div className="flex items-center gap-1 shrink-0">
-                      <button
-                        onClick={() => handleDelete(run.run_hash)}
-                        className="text-xs text-red-400 hover:text-red-300"
-                      >
-                        Confirm
-                      </button>
-                      <button
-                        onClick={() => setDeleteConfirm(null)}
-                        className="text-xs text-[var(--text-tertiary)]"
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  ) : (
-                    <button
-                      onClick={() => setDeleteConfirm(run.run_hash)}
-                      className="text-xs text-[var(--text-tertiary)] hover:text-red-400 transition-colors shrink-0"
-                    >
-                      Delete
-                    </button>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-4">
-                <button
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
-                  disabled={page <= 1}
-                  className="px-3 py-1.5 text-sm rounded border border-[var(--border-subtle)] disabled:opacity-30"
-                >
-                  Prev
-                </button>
-                <span className="text-sm text-[var(--text-tertiary)]">
-                  {page} / {totalPages}
-                </span>
-                <button
-                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                  disabled={page >= totalPages}
-                  className="px-3 py-1.5 text-sm rounded border border-[var(--border-subtle)] disabled:opacity-30"
-                >
-                  Next
-                </button>
-              </div>
-            )}
-          </>
-        )}
-      </section>
-
-      {/* Personal Stats */}
-      <section>
-        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Your Stats</h2>
-        <ProfileStats />
       </section>
     </div>
   );

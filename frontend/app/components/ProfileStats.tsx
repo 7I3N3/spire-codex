@@ -116,9 +116,43 @@ function EntityRow({ name, imageSrc, stat, href }: { name: string; imageSrc: str
   );
 }
 
-type Tab = "overview" | "cards" | "relics" | "potions";
+const STARTER_CARDS = new Set([
+  "STRIKE_IRONCLAD", "STRIKE_SILENT", "STRIKE_DEFECT", "STRIKE_NECROBINDER", "STRIKE_REGENT",
+  "DEFEND_IRONCLAD", "DEFEND_SILENT", "DEFEND_DEFECT", "DEFEND_NECROBINDER", "DEFEND_REGENT",
+]);
 
-export default function ProfileStats() {
+const STARTER_RELICS = new Set([
+  "BURNING_BLOOD", "RING_OF_THE_SNAKE", "CRACKED_CORE", "BOUND_PHYLACTERY", "DIVINE_RIGHT",
+]);
+
+interface Run {
+  run_hash: string;
+  character: string;
+  win: boolean;
+  was_abandoned: boolean;
+  ascension: number;
+  floors_reached: number;
+  submitted_at: string;
+}
+
+interface ProfileStatsProps {
+  runs: Run[];
+  runsTotal: number;
+  runsLoading: boolean;
+  runsPage: number;
+  runsTotalPages: number;
+  onPageChange: (page: number | ((p: number) => number)) => void;
+  onDeleteRun: (hash: string) => void;
+  deleteConfirm: string | null;
+  onDeleteConfirm: (hash: string | null) => void;
+}
+
+type Tab = "overview" | "runs" | "cards" | "relics" | "potions";
+
+export default function ProfileStats({
+  runs, runsTotal, runsLoading, runsPage, runsTotalPages,
+  onPageChange, onDeleteRun, deleteConfirm, onDeleteConfirm,
+}: ProfileStatsProps) {
   const lp = useLangPrefix();
   const [stats, setStats] = useState<Stats | null>(null);
   const [bests, setBests] = useState<PersonalBests | null>(null);
@@ -179,13 +213,18 @@ export default function ProfileStats() {
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "overview", label: "Overview" },
+    { key: "runs", label: `My Runs${runsTotal > 0 ? ` (${runsTotal})` : ""}` },
     { key: "cards", label: "Cards" },
     { key: "relics", label: "Relics" },
     { key: "potions", label: "Potions" },
   ];
 
-  const topCards = (stats.top_cards || []).slice(0, 10);
-  const topRelics = (stats.top_relics || []).slice(0, 10);
+  const topCards = (stats.top_cards || [])
+    .filter((c) => !STARTER_CARDS.has(c.card_id))
+    .slice(0, 10);
+  const topRelics = (stats.top_relics || [])
+    .filter((r) => !STARTER_RELICS.has(r.relic_id))
+    .slice(0, 10);
   const topPotions = (stats.top_potions || [])
     .sort((a, b) => b.picked - a.picked)
     .slice(0, 10);
@@ -227,8 +266,7 @@ export default function ProfileStats() {
                   const pct = stats.total_runs > 0 ? (c.total / stats.total_runs) * 100 : 0;
                   return (
                     <div key={c.character} className="flex items-center gap-3 text-sm">
-                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-                      <span className="w-24 text-[var(--text-primary)]">{displayName(c.character)}</span>
+                      <span className="w-24 font-medium" style={{ color }}>{displayName(c.character)}</span>
                       <div className="flex-1 h-1.5 rounded-full bg-[var(--bg-primary)] overflow-hidden">
                         <div className="h-full rounded-full" style={{ width: `${pct}%`, backgroundColor: color }} />
                       </div>
@@ -298,14 +336,10 @@ export default function ProfileStats() {
                     }`}
                   >
                     <span className="w-5 text-right text-xs text-[var(--text-tertiary)] tabular-nums">{i + 1}</span>
-                    <span
-                      className="w-2 h-2 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: CHAR_COLORS[entry.character] || "#888" }}
-                    />
                     <span className={`flex-1 truncate ${entry.is_current_user ? "text-[var(--accent-gold)] font-medium" : "text-[var(--text-primary)]"}`}>
                       {entry.username || "Anonymous"}
                     </span>
-                    <span className="text-xs text-[var(--text-tertiary)] tabular-nums">{displayName(entry.character)}</span>
+                    <span className="text-xs tabular-nums" style={{ color: CHAR_COLORS[entry.character] || "var(--text-tertiary)" }}>{displayName(entry.character)}</span>
                     <span className="text-xs text-[var(--text-primary)] tabular-nums font-medium">{formatTime(entry.run_time)}</span>
                   </Link>
                 ))}
@@ -334,10 +368,7 @@ export default function ProfileStats() {
                   return (
                     <div key={c.character} className="space-y-1">
                       <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
-                          <span className="text-[var(--text-primary)]">{displayName(c.character)}</span>
-                        </div>
+                        <span className="font-medium" style={{ color }}>{displayName(c.character)}</span>
                         <span className={`text-xs font-medium tabular-nums ${deltaColor}`}>
                           {delta > 0 ? "+" : ""}{delta.toFixed(1)}%
                         </span>
@@ -378,6 +409,104 @@ export default function ProfileStats() {
                 ))}
               </div>
             </div>
+          )}
+        </div>
+      )}
+
+      {tab === "runs" && (
+        <div>
+          {runsLoading ? (
+            <div className="space-y-2">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="h-12 bg-[var(--bg-card)] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : runs.length === 0 ? (
+            <p className="text-sm text-[var(--text-secondary)] py-4">
+              No runs yet. Upload .run files to get started.
+            </p>
+          ) : (
+            <>
+              <div className="space-y-1.5">
+                {runs.map((run) => (
+                  <div
+                    key={run.run_hash}
+                    className="flex items-center gap-2 sm:gap-3 px-3 py-2.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] text-sm"
+                  >
+                    <span className="font-medium w-20 sm:w-24 truncate" style={{ color: CHAR_COLORS[run.character] || "var(--text-primary)" }}>
+                      {run.character}
+                    </span>
+                    <span className={`shrink-0 text-xs px-1.5 py-0.5 rounded ${
+                      run.win
+                        ? "bg-green-500/15 text-green-400"
+                        : run.was_abandoned
+                          ? "bg-yellow-500/15 text-yellow-400"
+                          : "bg-red-500/15 text-red-400"
+                    }`}>
+                      {run.win ? "W" : run.was_abandoned ? "A" : "L"}
+                    </span>
+                    <span className="text-[var(--text-tertiary)] text-xs hidden sm:inline">
+                      A{run.ascension}
+                    </span>
+                    <span className="text-[var(--text-tertiary)] text-xs hidden sm:inline">
+                      F{run.floors_reached}
+                    </span>
+                    <span className="flex-1" />
+                    <Link
+                      href={`/runs/${run.run_hash}`}
+                      className="text-xs text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors shrink-0"
+                    >
+                      View
+                    </Link>
+                    {deleteConfirm === run.run_hash ? (
+                      <div className="flex items-center gap-1 shrink-0">
+                        <button
+                          onClick={() => onDeleteRun(run.run_hash)}
+                          className="text-xs text-red-400 hover:text-red-300"
+                        >
+                          Confirm
+                        </button>
+                        <button
+                          onClick={() => onDeleteConfirm(null)}
+                          className="text-xs text-[var(--text-tertiary)]"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => onDeleteConfirm(run.run_hash)}
+                        className="text-xs text-[var(--text-tertiary)] hover:text-red-400 transition-colors shrink-0"
+                      >
+                        Delete
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {runsTotalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mt-4">
+                  <button
+                    onClick={() => onPageChange((p: number) => Math.max(1, p - 1))}
+                    disabled={runsPage <= 1}
+                    className="px-3 py-1.5 text-sm rounded border border-[var(--border-subtle)] disabled:opacity-30"
+                  >
+                    Prev
+                  </button>
+                  <span className="text-sm text-[var(--text-tertiary)]">
+                    {runsPage} / {runsTotalPages}
+                  </span>
+                  <button
+                    onClick={() => onPageChange((p: number) => Math.min(runsTotalPages, p + 1))}
+                    disabled={runsPage >= runsTotalPages}
+                    className="px-3 py-1.5 text-sm rounded border border-[var(--border-subtle)] disabled:opacity-30"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       )}

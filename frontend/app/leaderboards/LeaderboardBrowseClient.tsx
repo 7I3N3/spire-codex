@@ -80,7 +80,7 @@ type Mode = "" | "single" | "multi";
 // `gameMode` mirrors the backend `game_mode` column. Empty string = no
 // filter (all modes). Default is "standard" since custom-seed and daily
 // runs aren't time-comparable to the canonical ladder.
-type GameMode = "" | "standard" | "daily" | "custom";
+type GameMode = "" | "standard" | "daily" | "daily_today" | "custom";
 
 function tabFromParam(value: string | null): Tab {
   if (value === "browse" || value === "highest_ascension") return value;
@@ -94,7 +94,7 @@ function modeFromParam(value: string | null): Mode {
 }
 
 function gameModeFromParam(value: string | null): GameMode {
-  if (value === "daily" || value === "custom" || value === "") return value;
+  if (value === "daily" || value === "daily_today" || value === "custom" || value === "") return value;
   if (value === "all") return "";
   return "standard";
 }
@@ -116,7 +116,7 @@ export default function LeaderboardBrowseClient() {
   const [gameMode, setGameMode] = useState<GameMode>(() => gameModeFromParam(searchParams.get("game_mode")));
 
   // --- Leaderboard state ---
-  const [lbChar, setLbChar] = useState("");
+  const [lbChar, setLbChar] = useState(() => searchParams.get("character") || "");
   const [lbPage, setLbPage] = useState(1);
   const [lbEntries, setLbEntries] = useState<LeaderboardEntry[]>([]);
   const [lbTotal, setLbTotal] = useState(0);
@@ -124,11 +124,11 @@ export default function LeaderboardBrowseClient() {
   const [lbLoading, setLbLoading] = useState(false);
 
   // --- Browse state ---
-  const [browseChar, setBrowseChar] = useState("");
-  const [browseWin, setBrowseWin] = useState("");
-  const [browseUser, setBrowseUser] = useState("");
+  const [browseChar, setBrowseChar] = useState(() => searchParams.get("browse_character") || "");
+  const [browseWin, setBrowseWin] = useState(() => searchParams.get("win") || "");
+  const [browseUser, setBrowseUser] = useState(() => searchParams.get("username") || "");
   const [browseSeed, setBrowseSeed] = useState("");
-  const [browseBuildId, setBrowseBuildId] = useState("");
+  const [browseBuildId, setBrowseBuildId] = useState(() => searchParams.get("build_id") || "");
   const [browseSort, setBrowseSort] = useState("date");
   const [browsePage, setBrowsePage] = useState(1);
   const [runList, setRunList] = useState<BrowseRun[]>([]);
@@ -141,7 +141,12 @@ export default function LeaderboardBrowseClient() {
   useEffect(() => {
     fetch(`${API}/api/runs/versions`)
       .then((r) => (r.ok ? r.json() : { versions: [] }))
-      .then((data) => setVersions(data.versions || []))
+      .then((data) => {
+        const filtered = (data.versions || [])
+          .filter((v: string) => !v.toLowerCase().includes("nonreleased"))
+          .sort((a: string, b: string) => b.localeCompare(a, undefined, { numeric: true }));
+        setVersions(filtered);
+      })
       .catch(() => {});
   }, []);
 
@@ -164,6 +169,22 @@ export default function LeaderboardBrowseClient() {
     return charNames[id.toUpperCase()] ?? displayName(`CHARACTER.${id}`);
   }
 
+  // Sync state to URL so links are shareable and back button works
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (tab !== "fastest") params.set("tab", tab);
+    if (mode) params.set("mode", mode);
+    if (gameMode && gameMode !== "standard") params.set("game_mode", gameMode);
+    if (lbChar) params.set("character", lbChar);
+    if (browseChar) params.set("browse_character", browseChar);
+    if (browseWin) params.set("win", browseWin);
+    if (browseUser) params.set("username", browseUser);
+    if (browseBuildId) params.set("build_id", browseBuildId);
+    const qs = params.toString();
+    const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    window.history.replaceState(null, "", url);
+  }, [tab, mode, gameMode, lbChar, browseChar, browseWin, browseUser, browseBuildId]);
+
   // Reset leaderboard page when filters change
   useEffect(() => { setLbPage(1); }, [tab, lbChar, mode, gameMode]);
 
@@ -174,7 +195,12 @@ export default function LeaderboardBrowseClient() {
     const params = new URLSearchParams();
     params.set("category", tab);
     if (mode) params.set("players", mode);
-    if (gameMode) params.set("game_mode", gameMode);
+    if (gameMode === "daily_today") {
+      params.set("game_mode", "daily");
+      params.set("today", "true");
+    } else if (gameMode) {
+      params.set("game_mode", gameMode);
+    }
     if (lbChar) params.set("character", lbChar);
     params.set("page", String(lbPage));
     params.set("limit", "20");
@@ -206,7 +232,12 @@ export default function LeaderboardBrowseClient() {
     if (tab !== "browse") return;
     const params = new URLSearchParams();
     if (mode) params.set("players", mode);
-    if (gameMode) params.set("game_mode", gameMode);
+    if (gameMode === "daily_today") {
+      params.set("game_mode", "daily");
+      params.set("today", "true");
+    } else if (gameMode) {
+      params.set("game_mode", gameMode);
+    }
     if (browseChar) params.set("character", browseChar);
     if (browseWin) params.set("win", browseWin);
     if (browseUser) params.set("username", browseUser);
@@ -270,6 +301,7 @@ export default function LeaderboardBrowseClient() {
           {([
             { value: "standard" as GameMode, label: t("Standard", lang) },
             { value: "daily" as GameMode, label: t("Daily", lang) },
+            { value: "daily_today" as GameMode, label: t("Today", lang) },
             { value: "custom" as GameMode, label: t("Custom", lang) },
             { value: "" as GameMode, label: t("All Modes", lang) },
           ]).map(({ value, label }) => (
