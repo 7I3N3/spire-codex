@@ -213,7 +213,7 @@ export default function ProfileStats({
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "overview", label: "Overview" },
-    { key: "runs", label: `My Runs${runsTotal > 0 ? ` (${runsTotal})` : ""}` },
+    { key: "runs", label: "Runs" },
     { key: "cards", label: "Cards" },
     { key: "relics", label: "Relics" },
     { key: "potions", label: "Potions" },
